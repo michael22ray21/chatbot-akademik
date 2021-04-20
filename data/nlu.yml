@@ -4,26 +4,28 @@ nlu:
 
 - intent: chitchat/ask_name
   examples: |
-    - What is your name?
-    - May I know your name?
-    - What do people call you?
-    - Do you have a name for yourself?
-
-- intent: chitchat/ask_weather
-  examples: |
-    - What's the weather like today?
-    - Does it look sunny outside today?
-    - Oh, do you mind checking the weather for me please?
-    - I like sunny days in Berlin.
+    - Siapa namamu?
+    - Boleh tahu namamu tidak?
+    - Bagaimana orang memanggilmu?
+    - Apakah kau memiliki nama?
 
 - intent: greet
   examples: |
     - hey
     - hello
     - hi
+    - halo
     - hello there
+    - selamat pagi
+    - selamat siang
+    - selamat sore
+    - selamat malam
     - good morning
     - good evening
+    - siang
+    - pagi
+    - sore
+    - malam
     - moin
     - hey there
     - let's go
@@ -34,6 +36,12 @@ nlu:
 
 - intent: goodbye
   examples: |
+    - dah
+    - daah
+    - dadah
+    - selamat tinggal
+    - sudah dulu ya
+    - Sampai jumpa lagi
     - good afternoon
     - cu
     - good by
@@ -48,6 +56,10 @@ nlu:
 
 - intent: affirm
   examples: |
+    - ya
+    - betul
+    - benar
+    - baik
     - yes
     - y
     - indeed
@@ -57,6 +69,10 @@ nlu:
 
 - intent: deny
   examples: |
+    - tidak
+    - maaf
+    - ngga
+    - nope
     - no
     - n
     - never
@@ -67,6 +83,7 @@ nlu:
 
 - intent: mood_great
   examples: |
+    - baik
     - perfect
     - great
     - amazing
@@ -101,6 +118,9 @@ nlu:
 
 - intent: bot_challenge
   examples: |
+    - apakah kamu sebuah bot?
+    - apakah anda bot?
+    - akapah kamu orang lain?
     - are you a bot?
     - are you a human?
     - am I talking to a bot?
@@ -108,12 +128,14 @@ nlu:
 
 - intent: tell_topic
   examples: |
+    - aku akan memberi tahu topik pembicaraan kita
     - let me tell you what the topic is
 
 - intent: repeat_topic
   examples: |
-    - what is the topic
-    - what are we talking about
+    - apa yang sedang kita bicarakan?
+    - what is the topic?
+    - what are we talking about?
 
 - intent: give_topic
   examples: |

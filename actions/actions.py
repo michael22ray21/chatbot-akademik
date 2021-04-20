@@ -37,7 +37,7 @@ class ActionSetTopic(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
         text = tracker.latest_message['text']
-        dispatcher.utter_message(text="I will remember this!")
+        dispatcher.utter_message(text="Oke! Akan kuingat.")
 
         return [SlotSet("current_topic", text)]
 
@@ -51,8 +51,8 @@ class ActionSayTopic(Action):
 
         topic = tracker.get_slot('current_topic')
         if not topic:
-            dispatcher.utter_message(text="I don't know what we are talking about.")
+            dispatcher.utter_message(text="Aku tidak tahu topik pembicaraan kita.")
         else:
-            dispatcher.utter_message(text=f"We are talking about {topic}.")
+            dispatcher.utter_message(text=f"Kita sedang membicarakan tentang {topic}.")
 
         return []
