@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Demo</title>
+    <!-- chatroom stylesheet -->
+    <link
+      rel="stylesheet"
+      href="https://npm-scalableminds.s3.eu-central-1.amazonaws.com/@scalableminds/chatroom@master/dist/Chatroom.css"
+    />
+  </head>
+
+  <body>
+    <!-- chatroom script -->
+    <script src="https://npm-scalableminds.s3.eu-central-1.amazonaws.com/@scalableminds/chatroom@master/dist/Chatroom.js"></script>
+    <!-- chatbot window script -->
+    <script type="text/javascript">
+      var chatroom = new window.Chatroom({
+        host: "http://localhost:5005",
+        title: "Chat with AcademyBot",
+        container: document.querySelector(".chat-container"),
+        welcomeMessage: "Hai, aku AcademyBot. Apa yang bisa saya bantu?",
+      });
+      chatroom.openChat();
+    </script>
+
+    <!-- the chat window element -->
+    <div class="chat-container"></div>
+  </body>
+</html>
