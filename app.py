@@ -8,9 +8,9 @@ from linebot.models import (MessageEvent, TextMessage, TextSendMessage)
 
 app = Flask(__name__)
 # get LINE_CHANNEL_ACCESS_TOKEN from your environment variable
-line_bot_api = LineBotApi(config("LINE_CHANNEL_ACCESS_TOKEN", default = "4IdWs8utZIdEoy4PsRKlIyAx0Una3RP9HqtEurXlJj1u3jd37L6V/QHsVfiprlsbujsfog0sDcMHSS9C070U1KPUVmrO1rM922v9hf2O8aGK3j6XSFPW2fPWrBSQtWgOHzf2iOvzGZi7HWkjJAa/VgdB04t89/1O/w1cDnyilFU="))
+line_bot_api = LineBotApi(config("LINE_CHANNEL_ACCESS_TOKEN", default = os.environ.get('LINE_ACCESS_TOKEN')))
 # get LINE_CHANNEL_SECRET from your environment variable
-handler = WebhookHandler(config("LINE_CHANNEL_SECRET", default = "a119e4bfc78f0fb3d8cbb0bf26724579"))
+handler = WebhookHandler(config("LINE_CHANNEL_SECRET", default = os.environ.get('LINE_CHANNEL_SECRET')))
 
 class RasaClient() :
     def __init__(self, url) :
