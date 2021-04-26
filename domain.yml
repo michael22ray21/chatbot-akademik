@@ -12,6 +12,18 @@ intents:
   - tell_topic
   - repeat_topic
   - give_topic
+    # intents made by me
+  - pindah_kelas
+  - sidang_ta_tesis
+  - prs_student_exchange
+  - credit_transfer
+  - surat_keterangan
+  - legalisir_transkrip_ijazah_terjemahan
+  - administrasi_fast_track
+  - pembuatan_transkrip_hilang_alumni
+  - pengajuan_beasiswa
+  - dosen_tamu
+  - kp
 
 slots:
   current_topic:
@@ -56,9 +68,32 @@ responses:
   utter_ask_topic:
   - text: "Apa topik pembicaraan kita?"
 
+  utter_ask_need_more_details:
+  - text: "Langkah berapakah yang kamu ingin tahu lebih lanjut?"
+
+  utter_list_step_pindah_kelas:
+  - text: "Berikut langkah-langkah pengajuan pindah kelas paralel:\n\n
+           1. Ajukan permohonan kepada kedua dosen pengampu.\n
+           2. Lalu meminta persetujuan kepada kedua dosen pengampu dengan membawa fotokopi KSM (kartu studi mahasiswa) yang sudah diubah.\n
+           3.a. Apabila tidak disetujui, lanjut mengikuti kelas sebelumnya.\n
+           3.b. Apabila disetujui, dosen akan menandatangani fotokopi KSM dan diberikan kepada mahasiswa.\n\n
+           4. Serahkan KSM yang sudah ditandatangani kepada staf administrasi.\n
+           5. Tandatangani lembar pendaftaran pindah kelas yang ada di Program Studi."
+
+  utter_list_step_sidang_TA: 
+  - text: "Berikut langkah yang harus dilakukan mahasiswa:\n\n
+           1. Kita harus mengisi form pendaftaran sidang TA/tesis kepada staf administrasi prodi.\n
+           2. Kemudian minta persetujuan dan tanda tangan dari dosen pembimbing dan dosen penguji.\n
+           3.a. Serahkan draf TA/tesis dan form pendaftaran sidang kepada staf administrasi prodi.\n
+           3.b. Jika dokumen belum sesuai persyaratan maka, dokumen pendaftaran akan dikembalikan. Perbaiki dokumen-dokumen lalu ulangi langkah 2.\n\n
+           4. Setelah dokumen yang diserahkan diproses, jadwal sidang akan diinformasikan dan draf TA/tesis akan diberikan kepada dosen pembimbing dan penguji bersamaan dengan surat tugas dan berkas penilaian.\n
+           5. Sidang kemudian dapat dilaksanakan."
+
+  utter_list_step_
+
 actions:
-- action_set_topic
-- action_say_topic
+  - action_set_topic
+  - action_say_topic
 
 session_config:
   session_expiration_time: 60

@@ -2,151 +2,218 @@ version: "2.0"
 
 nlu:
 
-- intent: chitchat/ask_name
-  examples: |
-    - Siapa namamu?
-    - Boleh tahu namamu tidak?
-    - Bagaimana orang memanggilmu?
-    - Apakah kau memiliki nama?
+  - intent: chitchat/ask_name
+    examples: |
+      - Siapa namamu?
+      - Boleh tahu namamu tidak?
+      - Bagaimana orang memanggilmu?
+      - Apakah kau memiliki nama?
 
-- intent: greet
-  examples: |
-    - hey
-    - hello
-    - hi
-    - halo
-    - hello there
-    - selamat pagi
-    - selamat siang
-    - selamat sore
-    - selamat malam
-    - good morning
-    - good evening
-    - siang
-    - pagi
-    - sore
-    - malam
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+  - intent: chitchat/bot_challenge
+    examples: |
+      - apakah kamu sebuah bot?
+      - apakah anda bot?
+      - akapah kamu orang lain?
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
 
-- intent: goodbye
-  examples: |
-    - dah
-    - daah
-    - dadah
-    - selamat tinggal
-    - sudah dulu ya
-    - Sampai jumpa lagi
-    - good afternoon
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - halo
+      - hello there
+      - selamat pagi
+      - selamat siang
+      - selamat sore
+      - selamat malam
+      - good morning
+      - good evening
+      - siang
+      - pagi
+      - sore
+      - malam
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
 
-- intent: affirm
-  examples: |
-    - ya
-    - betul
-    - benar
-    - baik
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+  - intent: goodbye
+    examples: |
+      - dah
+      - daah
+      - dadah
+      - selamat tinggal
+      - sudah dulu ya
+      - Sampai jumpa lagi
+      - good afternoon
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
 
-- intent: deny
-  examples: |
-    - tidak
-    - maaf
-    - ngga
-    - nope
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+  - intent: affirm
+    examples: |
+      - ya
+      - betul
+      - benar
+      - baik
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
 
-- intent: mood_great
-  examples: |
-    - baik
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+  - intent: deny
+    examples: |
+      - tidak
+      - maaf
+      - ngga
+      - nope
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
 
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+  - intent: mood_great
+    examples: |
+      - baik
+      - perfect
+      - great
+      - amazing
+      - feeling like a king
+      - wonderful
+      - I am feeling very good
+      - I am great
+      - I am amazing
+      - I am going to save the world
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
 
-- intent: bot_challenge
-  examples: |
-    - apakah kamu sebuah bot?
-    - apakah anda bot?
-    - akapah kamu orang lain?
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+  - intent: mood_unhappy
+    examples: |
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - super sad
+      - I'm so sad
+      - sad
+      - very sad
+      - unhappy
+      - not good
+      - not very good
+      - extremly sad
+      - so saad
+      - so sad
 
-- intent: tell_topic
-  examples: |
-    - aku akan memberi tahu topik pembicaraan kita
-    - let me tell you what the topic is
+  - intent: tell_topic
+    examples: |
+      - aku akan memberi tahu topik pembicaraan kita
+      - let me tell you what the topic is
 
-- intent: repeat_topic
-  examples: |
-    - apa yang sedang kita bicarakan?
-    - what is the topic?
-    - what are we talking about?
+  - intent: repeat_topic
+    examples: |
+      - apa yang sedang kita bicarakan?
+      - what is the topic?
+      - what are we talking about?
 
-- intent: give_topic
-  examples: |
-    - general
-    - pindah kelas
-    - pelayanan sidang
-    - PRS student exchange
-    - surat keterangan
-    - legalisir transkrip, ijazah, dann terjemahan  ijazah
-    - fast track
-    - transkrip hilang bagi alumni
-    - pengajuan beasiswa ITB dan/atau voucher
-    - dosen tamu
-    - kp
+  - intent: give_topic
+    examples: |
+      - general
+      - pindah kelas
+      - pelayanan sidang
+      - PRS student exchange
+      - surat keterangan
+      - legalisir transkrip, ijazah, dann terjemahan  ijazah
+      - fast track
+      - transkrip hilang bagi alumni
+      - pengajuan beasiswa ITB dan/atau voucher
+      - dosen tamu
+      - kp
+
+  # intents made by me
+  - intent: pindah_kelas
+    examples: |
+      - saya mau pindah kelas
+      - pindah kelas bagaimana ya?
+      - kelas saya bentrok
+      - aku ingin kelas baru
+
+  - intent: sidang_ta_tesis
+    examples: |
+      - sidang
+      - saya mau sidang
+      - proses sidang bagaimana ya?
+      - TA saya sudah selesai
+      - TA selesai bagaimana ya?
+
+  - intent: prs_student_exchange
+    examples: |
+      - saya student exchange yang ingin PRS
+      - saya student exchange dan rencana studi saya sudah selesai
+      - saya student exchange dan rencana studi saya ingin diganti
+
+  - intent: credit_transfer
+    examples: |
+      - bagaimana transfer SKS saya?
+
+  - intent: surat_keterangan
+    examples: |
+      - bagaimana pembuatan surat keterangan
+
+  - intent: legalisir_transkrip_ijazah_terjemahan
+    examples: |
+      - ijazah saya ingin dilegalisir
+      - transkrip saya ingin dilegalisir
+      - terjemahan ijazah saya ingin dilegalisir
+
+  - intent: administrasi_fast_track
+    examples: |
+      - fast track bagaimana?
+      - butuh apa saja untuk fast track
+      - program jalur cepat
+      - sarjana-magister
+
+  - intent: pembuatan_transkrip_hilang_alumni
+    examples: |
+      - transkrip saya hilang
+
+  - intent: pengajuan_beasiswa
+    examples: |
+      - mengajukan beasiswa bagaimana?
+
+  - intent: dosen_tamu
+    examples: |
+      - bagaimana mengadakan kuliah tamu?
+      - saya ingin mengadakan kuliah tamu
+      - ada dosen tamu yang ingin saya ajukan untuk mengadakan kuliah tamu
+
+  - intent: kp
+    examples: |
+      - saya ingin kp
+      - saya ingin kerja praktek
+      - apa itu kp?
+      - apa itu kerja praktek?
+      - bagaimana cara untuk kerja praktek?
+      - cara kp bagaimana?
+      - cara kerja praktek bagaimana?
