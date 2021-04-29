@@ -37,7 +37,7 @@ class ActionSetTopic(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
         text = tracker.latest_message['text']
-        dispatcher.utter_message(text="Oke! Akan kuingat.")
+        dispatcher.utter_message(text="Oke!")
 
         return [SlotSet("current_topic", text)]
 

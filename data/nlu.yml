@@ -13,7 +13,7 @@ nlu:
     examples: |
       - apakah kamu sebuah bot?
       - apakah anda bot?
-      - akapah kamu orang lain?
+      - apakah kamu orang lain?
       - are you a bot?
       - are you a human?
       - am I talking to a bot?
@@ -143,8 +143,9 @@ nlu:
       - pindah kelas
       - pelayanan sidang
       - PRS student exchange
+      - alih kredit mahasiswa outbound
       - surat keterangan
-      - legalisir transkrip, ijazah, dann terjemahan  ijazah
+      - legalisir transkrip, ijazah, dan terjemahan  ijazah
       - fast track
       - transkrip hilang bagi alumni
       - pengajuan beasiswa ITB dan/atau voucher
@@ -212,8 +213,6 @@ nlu:
     examples: |
       - saya ingin kp
       - saya ingin kerja praktek
-      - apa itu kp?
-      - apa itu kerja praktek?
       - bagaimana cara untuk kerja praktek?
       - cara kp bagaimana?
       - cara kerja praktek bagaimana?

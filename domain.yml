@@ -31,6 +31,10 @@ slots:
 
 responses:
 
+  utter_chitchat:
+  - text: "Hai juga"
+  - text: "Haloo"
+
   utter_chitchat/ask_name:
   - image: "https://i.imgur.com/zTvA58i.jpeg"
     text: "Halo, namaku adalah AcademyBot."
@@ -38,9 +42,11 @@ responses:
 
   utter_please_rephrase:
   - text: "Maaf, saya kurang mengerti. Bisa diperjelas?"
+  - text: "Aduh, saya kurang dapat maksud anda. Mungkin bisa diperjelas?"
 
   utter_default:
-  - text: "Maaf, sepertinya saya kurang mengerti. Bisa diperjelas?"
+  - text: "Maaf, sepertinya saya kurang mengerti."
+  - text: "Aduh, saya kurang dapat maksud anda."
 
   utter_greet:
   - text: "Hey. Apa yang bisa saya bantu?"
@@ -62,6 +68,9 @@ responses:
   - text: "Sampai jumpa lagi"
   - text: "Selamat tinggal"
 
+  utter_chitchat/bot_challenge:
+  - text: "Aku adalah sebuah bot, dibuat dengan Rasa."
+  
   utter_iamabot:
   - text: "Aku adalah sebuah bot, dibuat dengan Rasa."
 
@@ -80,7 +89,7 @@ responses:
            4. Serahkan KSM yang sudah ditandatangani kepada staf administrasi.\n
            5. Tandatangani lembar pendaftaran pindah kelas yang ada di Program Studi."
 
-  utter_list_step_sidang_TA: 
+  utter_list_step_sidang_TA:
   - text: "Berikut langkah yang harus dilakukan mahasiswa:\n\n
            1. Kita harus mengisi form pendaftaran sidang TA/tesis kepada staf administrasi prodi.\n
            2. Kemudian minta persetujuan dan tanda tangan dari dosen pembimbing dan dosen penguji.\n
@@ -89,7 +98,95 @@ responses:
            4. Setelah dokumen yang diserahkan diproses, jadwal sidang akan diinformasikan dan draf TA/tesis akan diberikan kepada dosen pembimbing dan penguji bersamaan dengan surat tugas dan berkas penilaian.\n
            5. Sidang kemudian dapat dilaksanakan."
 
-  utter_list_step_
+  utter_list_step_Pelayanan_Perubahan_Rencana_Studi_Mahasiswa_Inbound_Student_Exchange:
+  - text: "Berikut langkah yang harus dilakukan mahasiswa:\n\n
+           1. Mahasiswa mendaftar secara online di web usm.itb.acid\n
+           2. Pendaftaran akan dievaluasi, jika mahasiswa lolos mahasiswa akan menerima LoA.\n
+           3. Kemudian mahasiswa tiba di ITB dan melakukan konfirmasi kedatangan Fak/Sek dan menemui KaProdi.\n
+           4. Mahasiswa melakukan diskusi dengan ketua program studi perihal pengambilan mata kuliah.\n
+           5.a. Jika ada perubahan perihal pengambilan mata kuliah, maka atas persetujuan Academic Advisor melakukan perubahan rencana studi dan menginformasikan ke Kasubbag. Akademik dan Kemahasiswaan.\n
+           5.b. Jika tidak ada perubahan perihal pengambilan mata kuliah, maka mengikuti perkuliahan sesuai jadwal.\n
+           6. Mahasiswa juga masih harus memastikan kembali bahwa mata kuliah yang diambil sudah sesuai dengan rencana studi yang final pada minggu ketiga perkuliahan."
+
+  utter_list_step_Pelayanan_Informasi_Proses_Alih_Kredit_Mahasiswa_Outbound_Double_Degree/Student_Exchange: 
+  - text: "Berikut langkah yang harus dilakukan mahasiswa:\n\n
+           1. Mahasiswa Mengajukan surat permohonan pengajuan proses alih kredit (credit transfer) mahasiswa outbound double degree/student exchange kepada Ketua Program Studi dengan mengisi Formulir Surat Permohonan Alih Kredit (Credit Transfer) – FRM/STEI/AKD/SOP-08/01-00.\n
+           2. Mahasiswa kemudian berdiskusi dan meminta persetujuan dosen wali akademik.\n
+           3. Setelah berdiskusi mahasiswa menyerahkan surat permohonan pengajuan proses alih kredit (credit transfer) mahasiswa outbound double degree/student exchange beserta kelengkapan berkas yang sudah disetujui oleh dosen wali akademik ke Staf Administrasi Prodi.
+           4. Lembar permohonan tersebut kemudian akan diproses oleh ketua program studi, mahasiswa diwajibkan melakukan perbaikan dan usulan ulang terhadap permohonan alih kredit (credit transfer), apabila usulan tidak disetujui oleh Ketua Program Studi."
+
+  utter_list_step_Penyediaan_Surat_Keterangan: 
+  - text: "Berikut langkah yang harus dilakukan mahasiswa:\n\n
+           1. Mahasiswa Mengisi Formulir Permohonan Dibuatkan Surat Keterangan/Pengantar (FRM/STEI/AKD/SOP-09/01.01) di staf layanan.\n
+           2. Mahasiswa kemudian menyerahkan formulir yang telah diisi kepada Staf Layanan, dan pastikan data sudah benar serta dicek oleh Staf Layanan.\n
+           3.a. Jika data yang diberikan tidak lengkap, maka data diperbaiki saat itu juga dan langsung diserahkan kepada staf layanan untuk diperiksa saat itu juga.\n
+           3.b. Apabila data yang diberikan sudah benar, maka data akan ditindaklanjuti oleh pihak bersangkutan.\n
+           4. Setelah data diproses mahasiswa dapat mengambil surat keterangan yang sudah ditandatangani oleh Ketua Program Studi di Staf Layanan."
+
+  utter_list_step_Legalisir_Transkrip_Ijazah_dan_Terjemahan_Ijazah: 
+  - text: "Berikut langkah yang harus dilakukan mahasiswa:\n\n
+           1. Mahasiswa menyerahkan dokumen persyaratan pengajuan legalisir (Menyerahkan fotokopi ijazah/transkrip (ind/ing) dan menunjukkan ijazah/transkrip asli kepada petugas legalisir serta membawa pas photo ukuran 4×6 (1 lembar) hitam putih untuk pembuatan terjemahan ijazah).\n
+           2.a. Jika ternyata semua dokumen yang diberikan belum sesuai, maka mahasiswa akan menerima berkas legalisir yang dikembalikan oleh staf layanan legalisir\n
+           2.b. Jika dokumen yang diberikan sudah benar, mahasiswa menerima bukti legalisir/terjemahan ijazah dan dokumen ijazah/transkrip asli serta melakukan pembayaran biaya legalisir/terjemahan ijazah.\n
+           3. Setelah berdiskusi mahasiswa menyerahkan surat permohonan pengajuan proses alih kredit (credit transfer) mahasiswa outbound double degree/student exchange beserta kelengkapan berkas yang sudah disetujui oleh dosen wali akademik ke Staf Administrasi Prodi.
+           4. Mahasiswa kemudian dapat Mengambil hasil legalisir/terjemahan ijazah ke petugas legalisir dengan membawa bukti legalisir."
+
+  utter_list_step_Layanan_Administrasi_Mahasiswa_Program_Jalur_Cepat_Sarjana-Magister: 
+  - text: "Berikut langkah yang harus dilakukan mahasiswa:\n\n
+           1. Pertama mahasiswa mengisi formulir permintaan (Mengisi Formulir Minat Program Jalur Cepat (Fast Track) Sarjana – Magister ITB (FRM/STEI/AKD/SOP-11/01-00) dan Formulir Daftar Mata Kuliah Jalur Cepat Sarjana – Magister (FRM/STEI/AKD/SOP-11/02-01)).\n
+           2. Setelah mengisi formulir permintaan mahasiswa kemudian berdiskusi dan meminta persetujuan wali.\n
+           3. Setelah berdiskusi, mahasiswa mendaftar ke prodi dan menyerahkan form yang telah ditandatangani oleh wali kepada staf adm.\n
+           4. Data yang diberikan kemudian diproses dan dievaluasi.\n
+           5.a. Jika data yang diberikan tidak memenuhi syarat, maka mahasiswa akan menerima hasil evaluasi yang telah dilaksanakan terkait dengan data yang diberikan.\n
+           5.b. Jika data yang diberikan ternyata memenuhi syarat, data akan diproses kembali.\n
+           6. Setelah selesai Kasubdit Akademik akan melakukan proses pengaturan situs akademik terhadap status baru peserta FT."
+
+  utter_list_step_Pelayanan_Pembuatan_Transkrip_Hilang_BagiAlumni: 
+  - text: "Berikut langkah yang harus dilakukan mahasiswa:\n\n
+           1. Pertama mahasiswa Membuat surat permohonan yang ditujukan kepada Ketua Program Studi tentang permohonan cetak ulang transkrip karena hilang/rusak dengan melampirkan dokumen sebagai berikut (Surat bukti kehilangan dari pihak yang berwajib, Pas photo dengan ukuran 2×3 hitam putih sebanyak 2 (dua) lembar, Transkrip yang rusak (apabila permohonan karena transkrip rusak).)\n
+           2. Mahasiswa kemudian menyerahkan surat permohonan beserta lampirannya kepada staf layanan.\n
+           3. Surat permohonan serta berkas-berkas yang telah diberikan kemudian akan diproses, setelah selesai diproses mahasiswa dapat mengambil transkrip yang sudah ditandatangan oleh Dekan dan Ketua Program Studi dengan menandatangani bukti pengambilan."
+
+  utter_list_step_Pelayanan_Pengajuan_Beasiswa_ITB_dan_Beasiswa_Voucher: 
+  - text: "Berikut langkah yang harus dilakukan mahasiswa:\n\n
+           1. Mahasiswa menerima pengumuman tentang Beasiswa ITB atau Beasiswa Voucher ITB baik yang disampaikan melalui e-mail, mading, atau terpublish pada website Lembaga Kemahasiswaan (https://kemahasiswaan.itb.ac.id/beasiswa) dan Sekolah Pascasarjana (http://www.sps.itb.ac.id).\n
+           2. Siswa yang tertarik dapat mendaftar dan menyerahkan persyaratan beasiswa terkait kepada staf administrasi prodi.\n
+           3. Pendaftaran serta kelengkapan berkas kemudian akan diperiksa.\n
+           4.a. Jika dirasa syarat belum terpenuhi, maka mahasiswa diwajibkan untuk melengkapi kekurangan persyaratan.\n
+           4.b. Jika ternyata semua sudah terpenuhi dan sesuai dengan syarat yang telah ditetapkan, maka dapat lanjut ke langkah selanjutnya.\n
+           5. Mahasiwa dapat Mengambil kembali surat pernyataan kesediaan sebagai asisten pengajar dan peneliti serta surat pernyataan (khusus kelengkapan beasiswa Voucher ITB) yang sudah disetujui oleh Ketua Program Studi dan Dekan maksimal 3 (tiga) hari kerja sejak pengajuan lengkap dari mahasiswa."
+
+utter_list_step_Pelayanan_Dosen_Tamu: 
+  - text: "Berikut langkah yang harus dilakukan mahasiswa:\n\n
+           1. Pertama mahasiswa Membuat surat permohonan yang ditujukan kepada Ketua Program Studi tentang permohonan cetak ulang transkrip karena hilang/rusak dengan melampirkan dokumen sebagai berikut (Surat bukti kehilangan dari pihak yang berwajib, Pas photo dengan ukuran 2×3 hitam putih sebanyak 2 (dua) lembar, Transkrip yang rusak (apabila permohonan karena transkrip rusak).)\n
+           2. Mahasiswa kemudian menyerahkan surat permohonan beserta lampirannya kepada staf layanan.\n
+           3. Surat permohonan serta berkas-berkas yang telah diberikan kemudian akan diproses, setelah selesai diproses mahasiswa dapat mengambil transkrip yang sudah ditandatangan oleh Dekan dan Ketua Program Studi dengan menandatangani bukti pengambilan."
+
+utter_list_step_Pelayanan_Surat_Permohonan_Kerja_Praktek_(Sebelum Pelaksanaan Kerja Praktek): 
+  - text: "Berikut langkah yang harus dilakukan mahasiswa:\n\n
+           1. Mahasiswa mencari perusahaan/instansi untuk melaksanakan Kerja Praktek. Jika dimungkinkan, sebaiknya mahasiswa terlebih dahulu melakukan hubungan informal dengan perusahaan/instansi yang bersangkutan untuk melihat kemungkinan dilakukannya Kerja Praktek di perusahaan/instansi tersebut.\n
+           2. Mahasiswa kemudian Mengisi Formulir Permintaan Surat Permohonan Kerja Praktek (FRM/STEI/AKD/ISK-01/01-00).\n
+           3. Setelah itu, Mahasiswa mengambil surat permohonan Kerja Praktek yang sudah ditandatangani oleh Ketua Program Studi di Staf Layanan Program Studi.\n
+           4. Mahasiswa kemudian Mengirimkan surat permohonan Kerja Praktek kepada perusahaan/instansi yang bersangkutan.\n
+           5. Jika mahasiswa tidak diterima perusahaan yang dituju, maka mahasiswa dapat mengajukan ulang surat permohonan Kerja Praktek ke perusahaan yang berbeda." 
+
+utter_list_step_Pelayanan_Surat_Pelaksanaan_Kerja_Praktek_dan_Formulir_Penilaian_(Pada saat akan melaksanakan Kerja Praktek): 
+  - text: "Berikut langkah yang harus dilakukan mahasiswa:\n\n
+           1. Mahasiswa mengambil surat pelaksanaan Kerja Praktek dan lampiran formulir penilaian Kerja Praktek di Staf Layanan Program Studi.\n
+           2. Mahasiswa kemudian Membawa surat pelaksanaan Kerja Praktek untuk diserahkan pada saat bertemu dengan pihak perusahaan/instansi.\n
+           3. Setelah itu, Formulir Penilaian Kerja Praktek yang masih kosong diserahkan kepada pembimbing Kerja Praktek di perusahaan/instansi tempat Kerja Praktek. Formulir ini wajib diisi dan ditandatangani oleh Pembimbing Kerja Praktek di perusahaan/instansi yang bersangkutan pada akhir kegiatan Kerja Praktek.\n
+           4. Softcopy lembar pengesahan untuk buku laporan Kerja Praktek dicetak dan ditandatangani oleh pejabat formal di perusahaan/instansi yang bersangkutan pada akhir kegiatan Kerja Praktek." 
+
+utter_list_step_Pada_akhir_Pelaksanaan_Kerja_Praktek_di_Perusahaan/Instansi: 
+  - text: "Berikut langkah yang harus dilakukan mahasiswa:\n\n
+           1. Mahasiswa mencetak draft laporan Kerja Praktek dan menyerahkan kepada pembimbing Kerja Praktek di perusahaan untuk disetujui.\n
+           2. Mahasiswa kemudian mencetak lembar pengesahaan buku laporan Kerja Praktek untuk ditandatangani oleh pejabat formal di perusahaan/instansi.\n
+           3. Setelah itu, Mahasiswa meminta Formulir Penilaian Kerja Praktek yang telah diisi dan ditandatangani oleh pembimbing Kerja Praktek dan dimasukkan ke dalam amplop tertutup.\n" 
+
+utter_list_step_Setelah_Pelaksanaan_Kerja_Praktek: 
+  - text: "Berikut langkah yang harus dilakukan mahasiswa:\n\n
+           1. Mahasiswa harus menyerahkan amplop tertutup dari perusahaan/instansi yang berisi Nilai Kerja Praktek kepada Program Studi.\n
+           2. Mahasiswa kemudian membuat Dokumen Laporan Kerja Praktek yang telah disetujui/disahkan oleh pembimbing Kerja Praktek dari perusahaan/instansi serta pembimbing KP di Program Studi." 
 
 actions:
   - action_set_topic
