@@ -108,7 +108,7 @@ responses:
            5.b. Jika tidak ada perubahan perihal pengambilan mata kuliah, maka mengikuti perkuliahan sesuai jadwal.\n
            6. Mahasiswa juga masih harus memastikan kembali bahwa mata kuliah yang diambil sudah sesuai dengan rencana studi yang final pada minggu ketiga perkuliahan."
 
-  utter_list_step_Pelayanan_Informasi_Proses_Alih_Kredit_Mahasiswa_Outbound_Double_Degree/Student_Exchange: 
+  utter_list_step_Pelayanan_Informasi_Proses_Alih_Kredit_Mahasiswa_Outbound_Double_Degree_atau_Student_Exchange: 
   - text: "Berikut langkah yang harus dilakukan mahasiswa:\n\n
            1. Mahasiswa Mengajukan surat permohonan pengajuan proses alih kredit (credit transfer) mahasiswa outbound double degree/student exchange kepada Ketua Program Studi dengan mengisi Formulir Surat Permohonan Alih Kredit (Credit Transfer) – FRM/STEI/AKD/SOP-08/01-00.\n
            2. Mahasiswa kemudian berdiskusi dan meminta persetujuan dosen wali akademik.\n
@@ -141,7 +141,7 @@ responses:
            5.b. Jika data yang diberikan ternyata memenuhi syarat, data akan diproses kembali.\n
            6. Setelah selesai Kasubdit Akademik akan melakukan proses pengaturan situs akademik terhadap status baru peserta FT."
 
-  utter_list_step_Pelayanan_Pembuatan_Transkrip_Hilang_BagiAlumni: 
+  utter_list_step_Pelayanan_Pembuatan_Transkrip_Hilang_Bagi_Alumni: 
   - text: "Berikut langkah yang harus dilakukan mahasiswa:\n\n
            1. Pertama mahasiswa Membuat surat permohonan yang ditujukan kepada Ketua Program Studi tentang permohonan cetak ulang transkrip karena hilang/rusak dengan melampirkan dokumen sebagai berikut (Surat bukti kehilangan dari pihak yang berwajib, Pas photo dengan ukuran 2×3 hitam putih sebanyak 2 (dua) lembar, Transkrip yang rusak (apabila permohonan karena transkrip rusak).)\n
            2. Mahasiswa kemudian menyerahkan surat permohonan beserta lampirannya kepada staf layanan.\n
@@ -156,13 +156,13 @@ responses:
            4.b. Jika ternyata semua sudah terpenuhi dan sesuai dengan syarat yang telah ditetapkan, maka dapat lanjut ke langkah selanjutnya.\n
            5. Mahasiwa dapat Mengambil kembali surat pernyataan kesediaan sebagai asisten pengajar dan peneliti serta surat pernyataan (khusus kelengkapan beasiswa Voucher ITB) yang sudah disetujui oleh Ketua Program Studi dan Dekan maksimal 3 (tiga) hari kerja sejak pengajuan lengkap dari mahasiswa."
 
-utter_list_step_Pelayanan_Dosen_Tamu: 
+utter_list_step_Pelayanan_Dosen_Tamu:
   - text: "Berikut langkah yang harus dilakukan mahasiswa:\n\n
            1. Pertama mahasiswa Membuat surat permohonan yang ditujukan kepada Ketua Program Studi tentang permohonan cetak ulang transkrip karena hilang/rusak dengan melampirkan dokumen sebagai berikut (Surat bukti kehilangan dari pihak yang berwajib, Pas photo dengan ukuran 2×3 hitam putih sebanyak 2 (dua) lembar, Transkrip yang rusak (apabila permohonan karena transkrip rusak).)\n
            2. Mahasiswa kemudian menyerahkan surat permohonan beserta lampirannya kepada staf layanan.\n
            3. Surat permohonan serta berkas-berkas yang telah diberikan kemudian akan diproses, setelah selesai diproses mahasiswa dapat mengambil transkrip yang sudah ditandatangan oleh Dekan dan Ketua Program Studi dengan menandatangani bukti pengambilan."
 
-utter_list_step_Pelayanan_Surat_Permohonan_Kerja_Praktek_(Sebelum Pelaksanaan Kerja Praktek): 
+utter_list_step_Pelayanan_Surat_Permohonan_Kerja_Praktek_(Sebelum Pelaksanaan Kerja Praktek):
   - text: "Berikut langkah yang harus dilakukan mahasiswa:\n\n
            1. Mahasiswa mencari perusahaan/instansi untuk melaksanakan Kerja Praktek. Jika dimungkinkan, sebaiknya mahasiswa terlebih dahulu melakukan hubungan informal dengan perusahaan/instansi yang bersangkutan untuk melihat kemungkinan dilakukannya Kerja Praktek di perusahaan/instansi tersebut.\n
            2. Mahasiswa kemudian Mengisi Formulir Permintaan Surat Permohonan Kerja Praktek (FRM/STEI/AKD/ISK-01/01-00).\n
@@ -170,20 +170,20 @@ utter_list_step_Pelayanan_Surat_Permohonan_Kerja_Praktek_(Sebelum Pelaksanaan Ke
            4. Mahasiswa kemudian Mengirimkan surat permohonan Kerja Praktek kepada perusahaan/instansi yang bersangkutan.\n
            5. Jika mahasiswa tidak diterima perusahaan yang dituju, maka mahasiswa dapat mengajukan ulang surat permohonan Kerja Praktek ke perusahaan yang berbeda." 
 
-utter_list_step_Pelayanan_Surat_Pelaksanaan_Kerja_Praktek_dan_Formulir_Penilaian_(Pada saat akan melaksanakan Kerja Praktek): 
+utter_list_step_Pelayanan_Surat_Pelaksanaan_Kerja_Praktek_dan_Formulir_Penilaian_(Pada saat akan melaksanakan Kerja Praktek):
   - text: "Berikut langkah yang harus dilakukan mahasiswa:\n\n
            1. Mahasiswa mengambil surat pelaksanaan Kerja Praktek dan lampiran formulir penilaian Kerja Praktek di Staf Layanan Program Studi.\n
            2. Mahasiswa kemudian Membawa surat pelaksanaan Kerja Praktek untuk diserahkan pada saat bertemu dengan pihak perusahaan/instansi.\n
            3. Setelah itu, Formulir Penilaian Kerja Praktek yang masih kosong diserahkan kepada pembimbing Kerja Praktek di perusahaan/instansi tempat Kerja Praktek. Formulir ini wajib diisi dan ditandatangani oleh Pembimbing Kerja Praktek di perusahaan/instansi yang bersangkutan pada akhir kegiatan Kerja Praktek.\n
            4. Softcopy lembar pengesahan untuk buku laporan Kerja Praktek dicetak dan ditandatangani oleh pejabat formal di perusahaan/instansi yang bersangkutan pada akhir kegiatan Kerja Praktek." 
 
-utter_list_step_Pada_akhir_Pelaksanaan_Kerja_Praktek_di_Perusahaan/Instansi: 
+utter_list_step_Pada_akhir_Pelaksanaan_Kerja_Praktek_di_Perusahaan_atau_Instansi:
   - text: "Berikut langkah yang harus dilakukan mahasiswa:\n\n
            1. Mahasiswa mencetak draft laporan Kerja Praktek dan menyerahkan kepada pembimbing Kerja Praktek di perusahaan untuk disetujui.\n
            2. Mahasiswa kemudian mencetak lembar pengesahaan buku laporan Kerja Praktek untuk ditandatangani oleh pejabat formal di perusahaan/instansi.\n
            3. Setelah itu, Mahasiswa meminta Formulir Penilaian Kerja Praktek yang telah diisi dan ditandatangani oleh pembimbing Kerja Praktek dan dimasukkan ke dalam amplop tertutup.\n" 
 
-utter_list_step_Setelah_Pelaksanaan_Kerja_Praktek: 
+utter_list_step_Setelah_Pelaksanaan_Kerja_Praktek:
   - text: "Berikut langkah yang harus dilakukan mahasiswa:\n\n
            1. Mahasiswa harus menyerahkan amplop tertutup dari perusahaan/instansi yang berisi Nilai Kerja Praktek kepada Program Studi.\n
            2. Mahasiswa kemudian membuat Dokumen Laporan Kerja Praktek yang telah disetujui/disahkan oleh pembimbing Kerja Praktek dari perusahaan/instansi serta pembimbing KP di Program Studi." 

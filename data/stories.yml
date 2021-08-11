@@ -82,7 +82,7 @@ stories:
     - action: action_set_topic
     - slot_was_set:
       - current_topic: alih kredit mahasiswa outbound
-    - action: utter_list_step_Pelayanan_Informasi_Proses_Alih_Kredit_Mahasiswa_Outbound_Double_Degree/Student_Exchange
+    - action: utter_list_step_Pelayanan_Informasi_Proses_Alih_Kredit_Mahasiswa_Outbound_Double_Degree_atau_Student_Exchange
     - action: utter_ask_need_more_details
 
   - story: pelayanan surat keterangan
@@ -126,7 +126,7 @@ stories:
     - action: action_set_topic
     - slot_was_set:
       - current_topic: transkrip hilang bagi alumni
-    - action: utter_list_step_Pelayanan_Pembuatan_Transkrip_Hilang_BagiAlumni
+    - action: utter_list_step_Pelayanan_Pembuatan_Transkrip_Hilang_Bagi_Alumni
     - action: utter_ask_need_more_details
 
   - story: pelayanan pengajuan beasiswa itb dan beasiswa voucher
@@ -161,6 +161,6 @@ stories:
       - current_topic: kp
     - action: utter_list_step_Pelayanan_Surat_Permohonan_Kerja_Praktek_(Sebelum Pelaksanaan Kerja Praktek)
     - action: utter_list_step_Pelayanan_Surat_Pelaksanaan_Kerja_Praktek_dan_Formulir_Penilaian_(Pada saat akan melaksanakan Kerja Praktek)
-    - action: utter_list_step_Pada_akhir_Pelaksanaan_Kerja_Praktek_di_Perusahaan/Instansi
+    - action: utter_list_step_Pada_akhir_Pelaksanaan_Kerja_Praktek_di_Perusahaan_atau_Instansi
     - action: utter_list_step_Setelah_Pelaksanaan_Kerja_Praktek
     - action: utter_ask_need_more_details
