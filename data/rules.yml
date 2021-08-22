@@ -2,15 +2,16 @@ version: "2.0"
 
 rules:
 
+  - rule: welcome user
+    conversation_start: true  # this rule only applies at the beginning of a conversation
+    steps:
+      - intent: greet
+      - action: utter_greet
+
   - rule: Ask the user to rephrase whenever they send a message with low NLU confidence
     steps:
       - intent: nlu_fallback
       - action: utter_please_rephrase
-
-  - rule: Say the topic each time user asks
-    steps:
-      - intent: repeat_topic
-      - action: action_say_topic
 
   - rule: Say goodbye anytime the user says goodbye
     steps:
@@ -26,3 +27,15 @@ rules:
     steps:
       - intent: chitchat
       - action: utter_chitchat
+
+  - rule: submit form
+    condition:
+    - active_loop: pindah_kelas_form
+    steps:
+    # deactivate the form
+    - action: restaurant_form
+    - active_loop: null
+    - slot_was_set:
+      - requested_slot: null
+    # after the form is done
+    - action: utter_step_detail

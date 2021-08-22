@@ -1,81 +1,6 @@
 #### This file contains tests to evaluate that your bot behaves as expected.
 #### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
 
-stories:
-- story: happy path 1
-  steps:
-  - user: |
-      hello there!
-    intent: greet
-  - action: utter_greet
-  - user: |
-      amazing
-    intent: mood_great
-  - action: utter_happy
-
-- story: happy path 2
-  steps:
-  - user: |
-      hello there!
-    intent: greet
-  - action: utter_greet
-  - user: |
-      amazing
-    intent: mood_great
-  - action: utter_happy
-  - user: |
-      bye-bye!
-    intent: goodbye
-  - action: utter_goodbye
-
-- story: sad path 1
-  steps:
-  - user: |
-      hello
-    intent: greet
-  - action: utter_greet
-  - user: |
-      not good
-    intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - user: |
-      yes
-    intent: affirm
-  - action: utter_happy
-
-- story: sad path 2
-  steps:
-  - user: |
-      hello
-    intent: greet
-  - action: utter_greet
-  - user: |
-      not good
-    intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - user: |
-      not really
-    intent: deny
-  - action: utter_goodbye
-
-- story: sad path 3
-  steps:
-  - user: |
-      hi
-    intent: greet
-  - action: utter_greet
-  - user: |
-      very terrible
-    intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - user: |
-      no
-    intent: deny
-  - action: utter_goodbye
-
 - story: say goodbye
   steps:
   - user: |
@@ -87,5 +12,173 @@ stories:
   steps:
   - user: |
       are you a bot?
-    intent: bot_challenge
-  - action: utter_iamabot
+    intent: chitchat/bot_challenge
+  - action: utter_chitchat/bot_challenge
+
+- story: pelayanan pindah kelas
+  steps:
+  - user: |
+      halo
+    intent: greet
+  - action: utter_greet
+  - user: |
+      Bagaimana caranya untuk pindah kelas
+    intent: pindah_kelas
+  - action: action_set_topic
+  - slot_was_set:
+    - current_topic: pindah kelas
+  - action: utter_list_step_pindah_kelas
+  - action: utter_ask_need_more_details
+
+- story: pelayanan sidang TA/tesis
+  steps:
+  - user: |
+      hai
+    intent: greet
+  - action: utter_greet
+  - user: |
+      bagaimana saya ingin sidang TA
+  - intent: sidang_ta_tesis
+  - action: action_set_topic
+  - slot_was_set:
+    - current_topic: pelayanan sidang
+  - action: utter_list_step_sidang_ta_tesis
+  - action: utter_ask_need_more_details
+
+- story: pelayanan PRS mahasiswa student exchange
+  steps:
+  - user: |
+      hello
+    intent: greet
+  - action: utter_greet
+  - user: |
+      saya mahasiswa student exchange dan perlu melakukan PRS
+    intent: prs_student_exchange
+  - action: action_set_topic
+  - slot_was_set:
+    - current_topic: PRS student exchange
+  - action: utter_list_step_prs_student_exchange
+  - action: utter_ask_need_more_details
+
+- story: pelayanan alih kredit mahasiswa outbound
+  steps:
+  - user: |
+      hi
+    intent: greet
+  - action: utter_greet
+  - user: |
+      saya ingin mentransfer SKS saya
+    intent: credit_transfer
+  - action: action_set_topic
+  - slot_was_set:
+    - current_topic: alih kredit mahasiswa outbound
+  - action: utter_list_step_credit_transfer
+  - action: utter_ask_need_more_details
+
+- story: pelayanan surat keterangan
+  steps:
+  - user: |
+      hi
+    intent: greet
+  - action: utter_greet
+  - user: |
+      saya perlu membuat surat keterangan
+    intent: surat_keterangan
+  - action: action_set_topic
+  - slot_was_set:
+    - current_topic: surat keterangan
+  - action: utter_list_step_penyediaan_surat_keterangan
+  - action: utter_ask_need_more_details
+
+- story: pelayanan legalisir transkrip, ijazah, dan terjemahan ijazah
+  steps:
+  - user: |
+      hallo
+    intent: greet
+  - action: utter_greet
+  - user: |
+      saya butuh terjemahan ijazah saya dilegalisir
+    intent: legalisir_transkrip_ijazah_terjemahan
+  - action: action_set_topic
+  - slot_was_set:
+    - current_topic: legalisir transkrip, ijazah, dan terjemahan  ijazah
+  - action: utter_list_step_legalisir_transkrip_ijazah_terjemahan
+  - action: utter_ask_need_more_details
+
+- story: layanan administrasi mahasiswa program jalur cepat sarjana-magister
+  steps:
+  - user: |
+      halo
+    intent: greet
+  - action: utter_greet
+  - user: |
+      saya ingin mengikuti program fast track
+    intent: administrasi_fast_track
+  - action: action_set_topic
+  - slot_was_set:
+    - current_topic: fast track
+  - action: utter_list_step_administrasi_fast_track
+  - action: utter_ask_need_more_details
+
+- story: pelayanan pembuatan transkrip hilang bagi alumni
+  steps:
+  - user: |
+      helo
+    intent: greet
+  - action: utter_greet
+  - user: |
+      transkrip saya hilang
+    intent: pembuatan_transkrip_hilang_alumni
+  - action: action_set_topic
+  - slot_was_set:
+    - current_topic: transkrip hilang bagi alumni
+  - action: utter_list_step_pembuatan_transkrip_hilang_alumni
+  - action: utter_ask_need_more_details
+
+- story: pelayanan pengajuan beasiswa itb dan beasiswa voucher
+  steps:
+  - user: |
+      halo
+    intent: greet
+  - action: utter_greet
+  - user: |
+      saya ingin mengajukan beasiswa saya
+    intent: pengajuan_beasiswa
+  - action: action_set_topic
+  - slot_was_set:
+    - current_topic: pengajuan beasiswa ITB dan/atau voucher
+  - action: utter_list_step_pengajuan_beasiswa
+  - action: utter_ask_need_more_details
+
+- story: pelayanan dosen tamu
+  steps:
+  - user: |
+      haiii
+    intent: greet
+  - action: utter_greet
+  - user: |
+      saya ingin mengadakan sebuah kuliah tamu
+    intent: dosen_tamu
+  - action: action_set_topic
+  - slot_was_set:
+    - current_topic: dosen tamu
+  - action: utter_list_step_dosen_tamu
+  - action: utter_ask_need_more_details
+
+- story: pelayanan kerja praktek untuk mahasiswa stei
+  steps:
+  - user: |
+      halo
+    intent: greet
+  - action: utter_greet
+  - user: |
+      saya perlu melaksanakan kerja praktek
+    intent: kp
+  - action: action_set_topic
+  - slot_was_set:
+    - current_topic: kp
+  - action: utter_list_step_Pelayanan_Surat_Permohonan_Kerja_Praktek_(Sebelum Pelaksanaan Kerja Praktek)
+  - action: utter_list_step_Pelayanan_Surat_Pelaksanaan_Kerja_Praktek_dan_Formulir_Penilaian_(Pada saat akan melaksanakan Kerja Praktek)
+  - action: utter_list_step_Pada_akhir_Pelaksanaan_Kerja_Praktek_di_Perusahaan_atau_Instansi
+  - action: utter_list_step_Setelah_Pelaksanaan_Kerja_Praktek
+  - action: utter_ask_need_more_details

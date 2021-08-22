@@ -14,10 +14,10 @@ nlu:
       - apakah kamu sebuah bot?
       - apakah anda bot?
       - apakah kamu orang lain?
-      - are you a bot?
-      - are you a human?
-      - am I talking to a bot?
-      - am I talking to a human?
+# - are you a bot?
+# - are you a human?
+# - am I talking to a bot?
+# - am I talking to a human?
 
   - intent: greet
     examples: |
@@ -25,24 +25,24 @@ nlu:
       - hello
       - hi
       - halo
-      - hello there
       - selamat pagi
       - selamat siang
       - selamat sore
       - selamat malam
-      - good morning
-      - good evening
       - siang
       - pagi
       - sore
       - malam
-      - moin
-      - hey there
-      - let's go
-      - hey dude
-      - goodmorning
-      - goodevening
-      - good afternoon
+# - good morning
+# - good evening
+# - moin
+# - hey there
+# - let's go
+# - hey dude
+# - goodmorning
+# - goodevening
+# - good afternoon
+# - hello there
 
   - intent: goodbye
     examples: |
@@ -52,107 +52,43 @@ nlu:
       - selamat tinggal
       - sudah dulu ya
       - Sampai jumpa lagi
-      - good afternoon
-      - cu
-      - good by
-      - cee you later
-      - good night
       - bye
-      - goodbye
-      - have a nice day
-      - see you around
       - bye bye
-      - see you later
+# - cu
+# - good by
+# - cee you later
+# - good night
+# - goodbye
+# - have a nice day
+# - see you around
+# - see you later
 
   - intent: affirm
     examples: |
       - ya
       - betul
       - benar
-      - baik
       - yes
       - y
-      - indeed
-      - of course
-      - that sounds good
-      - correct
+# - indeed
+# - of course
+# - that sounds good
+# - correct
 
   - intent: deny
     examples: |
       - tidak
       - maaf
       - ngga
-      - nope
-      - no
-      - n
-      - never
-      - I don't think so
-      - don't like that
-      - no way
-      - not really
+# - nope
+# - no
+# - n
+# - never
+# - I don't think so
+# - don't like that
+# - no way
+# - not really
 
-  - intent: mood_great
-    examples: |
-      - baik
-      - perfect
-      - great
-      - amazing
-      - feeling like a king
-      - wonderful
-      - I am feeling very good
-      - I am great
-      - I am amazing
-      - I am going to save the world
-      - super stoked
-      - extremely good
-      - so so perfect
-      - so good
-      - so perfect
-
-  - intent: mood_unhappy
-    examples: |
-      - my day was horrible
-      - I am sad
-      - I don't feel very well
-      - I am disappointed
-      - super sad
-      - I'm so sad
-      - sad
-      - very sad
-      - unhappy
-      - not good
-      - not very good
-      - extremly sad
-      - so saad
-      - so sad
-
-  - intent: tell_topic
-    examples: |
-      - aku akan memberi tahu topik pembicaraan kita
-      - let me tell you what the topic is
-
-  - intent: repeat_topic
-    examples: |
-      - apa yang sedang kita bicarakan?
-      - what is the topic?
-      - what are we talking about?
-
-  - intent: give_topic
-    examples: |
-      - general
-      - pindah kelas
-      - pelayanan sidang
-      - PRS student exchange
-      - alih kredit mahasiswa outbound
-      - surat keterangan
-      - legalisir transkrip, ijazah, dan terjemahan  ijazah
-      - fast track
-      - transkrip hilang bagi alumni
-      - pengajuan beasiswa ITB dan/atau voucher
-      - dosen tamu
-      - kp
-
-  # intents made by me
   - intent: pindah_kelas
     examples: |
       - saya mau pindah kelas
@@ -170,17 +106,19 @@ nlu:
 
   - intent: prs_student_exchange
     examples: |
-      - saya student exchange yang ingin PRS
+      - saya mahasiswa student exchange yang ingin PRS
       - saya student exchange dan rencana studi saya sudah selesai
       - saya student exchange dan rencana studi saya ingin diganti
 
   - intent: credit_transfer
     examples: |
       - bagaimana transfer SKS saya?
+      - cara mentransfer SKS bagaimana ya?
 
   - intent: surat_keterangan
     examples: |
-      - bagaimana pembuatan surat keterangan
+      - bagaimana pembuatan surat keterangan?
+      - proses pembuatan surat keterangan bagaimana?
 
   - intent: legalisir_transkrip_ijazah_terjemahan
     examples: |
@@ -198,10 +136,13 @@ nlu:
   - intent: pembuatan_transkrip_hilang_alumni
     examples: |
       - transkrip saya hilang
+      - bagaimana kalau transkrip saya hilang
+      - saya kehilangan transkrip saya
 
   - intent: pengajuan_beasiswa
     examples: |
       - mengajukan beasiswa bagaimana?
+      - bagaimana cara mengajukan beasiswa?
 
   - intent: dosen_tamu
     examples: |
@@ -216,3 +157,26 @@ nlu:
       - bagaimana cara untuk kerja praktek?
       - cara kp bagaimana?
       - cara kerja praktek bagaimana?
+
+  - intent: step_number
+    examples: |
+      - langkah [1](step_number)
+      - nomor [2](step_number)
+      - step [3](step_number)
+      - [4](step_number)
+      - langkah [5](step_number)
+      - nomor [6](step_number)
+      - step [1.1](step_number)
+      - [1.2](step_number)
+      - langkah [1.3](step_number)
+      - nomor [1.4](step_number)
+      - step [1.5](step_number)
+      - [2.1](step_number)
+      - langkah [2.2](step_number)
+      - nomor [2.3](step_number)
+      - step [2.4](step_number)
+      - [3.1](step_number)
+      - langkah [3.2](step_number)
+      - nomor [3.3](step_number)
+      - step [4.1](step_number)
+      - [4.2](step_number)

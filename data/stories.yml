@@ -2,45 +2,6 @@ version: "2.0"
 
 stories:
 
-  - story: happy path
-    steps:
-    - intent: greet
-    - action: utter_greet
-    - intent: mood_great
-    - action: utter_happy
-
-  - story: sad path 1
-    steps:
-    - intent: greet
-    - action: utter_greet
-    - intent: mood_unhappy
-    - action: utter_cheer_up
-    - action: utter_did_that_help
-    - intent: affirm
-    - action: utter_happy
-
-  - story: sad path 2
-    steps:
-    - intent: greet
-    - action: utter_greet
-    - intent: mood_unhappy
-    - action: utter_cheer_up
-    - action: utter_did_that_help
-    - intent: deny
-    - action: utter_goodbye
-
-  - story: topic path
-    steps:
-    - intent: greet
-    - action: utter_greet
-    - intent: tell_topic
-    - action: utter_ask_topic
-    - intent: give_topic
-    - action: action_set_topic
-    - slot_was_set:
-      - current_topic: general
-
-  # stories made by me
   - story: pelayanan pindah kelas
     steps:
     - intent: greet
@@ -51,6 +12,11 @@ stories:
       - current_topic: pindah kelas
     - action: utter_list_step_pindah_kelas
     - action: utter_ask_need_more_details
+    - intent: step_number
+    - action: pindah_kelas_form
+    - active_loop: pindah_kelas_form
+    - slot_was_set:
+      - step_number: 1
 
   - story: pelayanan sidang TA/tesis
     steps:
@@ -60,7 +26,7 @@ stories:
     - action: action_set_topic
     - slot_was_set:
       - current_topic: pelayanan sidang
-    - action: utter_list_step_sidang_TA
+    - action: utter_list_step_sidang_ta_tesis
     - action: utter_ask_need_more_details
 
   - story: pelayanan PRS mahasiswa student exchange
@@ -71,7 +37,7 @@ stories:
     - action: action_set_topic
     - slot_was_set:
       - current_topic: PRS student exchange
-    - action: utter_list_step_Pelayanan_Perubahan_Rencana_Studi_Mahasiswa_Inbound_Student_Exchange
+    - action: utter_list_step_prs_student_exchange
     - action: utter_ask_need_more_details
 
   - story: pelayanan alih kredit mahasiswa outbound
@@ -82,7 +48,7 @@ stories:
     - action: action_set_topic
     - slot_was_set:
       - current_topic: alih kredit mahasiswa outbound
-    - action: utter_list_step_Pelayanan_Informasi_Proses_Alih_Kredit_Mahasiswa_Outbound_Double_Degree_atau_Student_Exchange
+    - action: utter_list_step_credit_transfer
     - action: utter_ask_need_more_details
 
   - story: pelayanan surat keterangan
@@ -93,7 +59,7 @@ stories:
     - action: action_set_topic
     - slot_was_set:
       - current_topic: surat keterangan
-    - action: utter_list_step_Penyediaan_Surat_Keterangan
+    - action: utter_list_step_penyediaan_surat_keterangan
     - action: utter_ask_need_more_details
 
   - story: pelayanan legalisir transkrip, ijazah, dan terjemahan ijazah
@@ -104,7 +70,7 @@ stories:
     - action: action_set_topic
     - slot_was_set:
       - current_topic: legalisir transkrip, ijazah, dan terjemahan  ijazah
-    - action: utter_list_step_Legalisir_Transkrip_Ijazah_dan_Terjemahan_Ijazah
+    - action: utter_list_step_legalisir_transkrip_ijazah_terjemahan
     - action: utter_ask_need_more_details
 
   - story: layanan administrasi mahasiswa program jalur cepat sarjana-magister
@@ -115,7 +81,7 @@ stories:
     - action: action_set_topic
     - slot_was_set:
       - current_topic: fast track
-    - action: utter_list_step_Layanan_Administrasi_Mahasiswa_Program_Jalur_Cepat_Sarjana-Magister
+    - action: utter_list_step_administrasi_fast_track
     - action: utter_ask_need_more_details
 
   - story: pelayanan pembuatan transkrip hilang bagi alumni
@@ -126,7 +92,7 @@ stories:
     - action: action_set_topic
     - slot_was_set:
       - current_topic: transkrip hilang bagi alumni
-    - action: utter_list_step_Pelayanan_Pembuatan_Transkrip_Hilang_Bagi_Alumni
+    - action: utter_list_step_pembuatan_transkrip_hilang_alumni
     - action: utter_ask_need_more_details
 
   - story: pelayanan pengajuan beasiswa itb dan beasiswa voucher
@@ -137,7 +103,7 @@ stories:
     - action: action_set_topic
     - slot_was_set:
       - current_topic: pengajuan beasiswa ITB dan/atau voucher
-    - action: utter_list_step_Pelayanan_Pengajuan_Beasiswa_ITB_dan_Beasiswa_Voucher
+    - action: utter_list_step_pengajuan_beasiswa
     - action: utter_ask_need_more_details
 
   - story: pelayanan dosen tamu
@@ -148,7 +114,7 @@ stories:
     - action: action_set_topic
     - slot_was_set:
       - current_topic: dosen tamu
-    - action: utter_list_step_Pelayanan_Dosen_Tamu
+    - action: utter_list_step_dosen_tamu
     - action: utter_ask_need_more_details
 
   - story: pelayanan kerja praktek untuk mahasiswa stei
