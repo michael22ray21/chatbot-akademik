@@ -28,6 +28,10 @@ slots:
     type: text
   step_number:
     type: text
+  current_query:
+    type: text
+  continue:
+    type: bool
 
 responses:
 
@@ -48,9 +52,12 @@ responses:
   - text: "Aduh, saya belum bisa membantu anda."
 
   utter_greet:
-  - text: "Hey. Apa yang bisa saya bantu?"
-  - text: "Hai. Apa yang bisa saya bantu?"
-  - text: "Halo. Apa yang bisa saya bantu?"
+  - text: "Hey. Apa yang bisa saya bantu? Kamu bisa langsung bertanya menggunakan kata kunci pelayanan atau dengan menyebutkan masalah kamu.\n
+           (Contoh: 'Pelayanan pindah kelas', atau 'bagaimana cara pembuatan surat keterangan')"
+  - text: "Hai. Apa yang bisa saya bantu? Kamu bisa langsung bertanya menggunakan kata kunci pelayanan atau dengan menyebutkan masalah kamu.\n
+           (Contoh: 'Pelayanan pindah kelas', atau 'bagaimana cara pembuatan surat keterangan')"
+  - text: "Halo. Apa yang bisa saya bantu? Kamu bisa langsung bertanya menggunakan kata kunci pelayanan atau dengan menyebutkan masalah kamu.\n
+           (Contoh: 'Pelayanan pindah kelas', atau 'bagaimana cara pembuatan surat keterangan')"
 
   utter_goodbye:
   - text: "Sampai jumpa lagi"
@@ -62,8 +69,14 @@ responses:
   utter_iamabot:
   - text: "Aku adalah sebuah bot, dibuat dengan Rasa."
 
-  utter_ask_need_more_details:
-  - text: "Langkah berapakah yang kamu ingin tahu lebih lanjut?"
+  utter_ask_more_info:
+  - text: "Pelayanan apa lagi yang kamu ingin tahu lebih lanjut?"
+  
+  utter_ask_step_number:
+  - text: "Apakah ada langkah yang kamu ingin tahu lebih lanjut?"
+
+  utter_ask_continue:
+  - text: "Apakah masih ada langkah yang perlu informasi lebih lanjut?"
 
   utter_list_step_pindah_kelas:
   - text: "Berikut langkah-langkah pengajuan pindah kelas paralel:\n\n
@@ -176,19 +189,20 @@ responses:
   utter_step_detail:
   - condition:
       - type: slot
-        name: step_number
+        name: current_query
         value: 1
     text: "step 1"
   - condition:
       - type: slot
-        name: step_number
+        name: current_query
         value: 2
     text: "step 2"
-  - text: "maaf"
+  - text: "maaf, langkah tersebut tidak tersedia."
 
 actions:
   - action_set_topic
   - action_say_topic
+  - validate_pindah_kelas_form
 
 forms:
   pindah_kelas_form:
@@ -198,6 +212,14 @@ forms:
       step_number:
         - type: from_entity
           entity: step_number
+          intent: step_number
+      continue:
+        - type: from_intent
+          intent: affirm
+          value: true
+        - type: from_intent
+          intent: deny
+          value: false
 
 session_config:
   session_expiration_time: 60

@@ -11,12 +11,22 @@ stories:
     - slot_was_set:
       - current_topic: pindah kelas
     - action: utter_list_step_pindah_kelas
-    - action: utter_ask_need_more_details
-    - intent: step_number
     - action: pindah_kelas_form
-    - active_loop: pindah_kelas_form
     - slot_was_set:
       - step_number: 1
+    - active_loop: pindah_kelas_form
+    - intent: step_number
+    - slot_was_set:
+      - step_number: 1
+    - action: utter_step_detail
+    - intent: deny
+    - slot_was_set:
+      - continue: false
+    - action: pindah_kelas_form
+    - active_loop: null
+    - action: utter_ask_more_info
+    - intent: deny
+    - action: utter_goodbye
 
   - story: pelayanan sidang TA/tesis
     steps:
@@ -27,7 +37,7 @@ stories:
     - slot_was_set:
       - current_topic: pelayanan sidang
     - action: utter_list_step_sidang_ta_tesis
-    - action: utter_ask_need_more_details
+    - action: utter_ask_more_info
 
   - story: pelayanan PRS mahasiswa student exchange
     steps:
@@ -38,7 +48,7 @@ stories:
     - slot_was_set:
       - current_topic: PRS student exchange
     - action: utter_list_step_prs_student_exchange
-    - action: utter_ask_need_more_details
+    - action: utter_ask_more_info
 
   - story: pelayanan alih kredit mahasiswa outbound
     steps:
@@ -49,7 +59,7 @@ stories:
     - slot_was_set:
       - current_topic: alih kredit mahasiswa outbound
     - action: utter_list_step_credit_transfer
-    - action: utter_ask_need_more_details
+    - action: utter_ask_more_info
 
   - story: pelayanan surat keterangan
     steps:
@@ -60,7 +70,7 @@ stories:
     - slot_was_set:
       - current_topic: surat keterangan
     - action: utter_list_step_penyediaan_surat_keterangan
-    - action: utter_ask_need_more_details
+    - action: utter_ask_more_info
 
   - story: pelayanan legalisir transkrip, ijazah, dan terjemahan ijazah
     steps:
@@ -71,7 +81,7 @@ stories:
     - slot_was_set:
       - current_topic: legalisir transkrip, ijazah, dan terjemahan  ijazah
     - action: utter_list_step_legalisir_transkrip_ijazah_terjemahan
-    - action: utter_ask_need_more_details
+    - action: utter_ask_more_info
 
   - story: layanan administrasi mahasiswa program jalur cepat sarjana-magister
     steps:
@@ -82,7 +92,7 @@ stories:
     - slot_was_set:
       - current_topic: fast track
     - action: utter_list_step_administrasi_fast_track
-    - action: utter_ask_need_more_details
+    - action: utter_ask_more_info
 
   - story: pelayanan pembuatan transkrip hilang bagi alumni
     steps:
@@ -93,7 +103,7 @@ stories:
     - slot_was_set:
       - current_topic: transkrip hilang bagi alumni
     - action: utter_list_step_pembuatan_transkrip_hilang_alumni
-    - action: utter_ask_need_more_details
+    - action: utter_ask_more_info
 
   - story: pelayanan pengajuan beasiswa itb dan beasiswa voucher
     steps:
@@ -104,7 +114,7 @@ stories:
     - slot_was_set:
       - current_topic: pengajuan beasiswa ITB dan/atau voucher
     - action: utter_list_step_pengajuan_beasiswa
-    - action: utter_ask_need_more_details
+    - action: utter_ask_more_info
 
   - story: pelayanan dosen tamu
     steps:
@@ -115,7 +125,7 @@ stories:
     - slot_was_set:
       - current_topic: dosen tamu
     - action: utter_list_step_dosen_tamu
-    - action: utter_ask_need_more_details
+    - action: utter_ask_more_info
 
   - story: pelayanan kerja praktek untuk mahasiswa stei
     steps:
@@ -129,4 +139,4 @@ stories:
     - action: utter_list_step_Pelayanan_Surat_Pelaksanaan_Kerja_Praktek_dan_Formulir_Penilaian_(Pada saat akan melaksanakan Kerja Praktek)
     - action: utter_list_step_Pada_akhir_Pelaksanaan_Kerja_Praktek_di_Perusahaan_atau_Instansi
     - action: utter_list_step_Setelah_Pelaksanaan_Kerja_Praktek
-    - action: utter_ask_need_more_details
+    - action: utter_ask_more_info

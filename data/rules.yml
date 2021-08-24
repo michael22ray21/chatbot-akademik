@@ -33,9 +33,9 @@ rules:
     - active_loop: pindah_kelas_form
     steps:
     # deactivate the form
-    - action: restaurant_form
+    - action: pindah_kelas_form
     - active_loop: null
     - slot_was_set:
       - requested_slot: null
     # after the form is done
-    - action: utter_step_detail
+    - action: utter_ask_more_info
