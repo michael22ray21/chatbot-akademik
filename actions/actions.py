@@ -34,7 +34,7 @@ class ActionSetTopic(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        text = tracker.latest_message['intent']
+        text = (tracker.latest_message['intent']).replace("_", " ")
         dispatcher.utter_message(text="Oke!")
 
         return [SlotSet("current_topic", text)]

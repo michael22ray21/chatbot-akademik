@@ -11,6 +11,9 @@
   </head>
 
   <body>
+    <!-- the chat window element -->
+    <div class="chat-container"></div>
+
     <!-- chatroom script -->
     <script src="https://npm-scalableminds.s3.eu-central-1.amazonaws.com/@scalableminds/chatroom@master/dist/Chatroom.js"></script>
     <!-- chatbot window script -->
@@ -19,12 +22,10 @@
         host: "http://localhost:5005",
         title: "Chat with AcademyBot",
         container: document.querySelector(".chat-container"),
-        welcomeMessage: "Hai, aku AcademyBot, aku akan membantu kamu dengan informasi mengenai pelayanan akademik di fakultas STEI ITB. Yuk mulai dengan sapaan.\n(seperti 'hai', 'halo', atau sapaan lainnya)",
+        welcomeMessage:
+          "Hai, aku AcademyBot, aku akan membantu kamu dengan informasi mengenai pelayanan akademik di fakultas STEI ITB. Yuk mulai dengan sapaan.\n(seperti 'hai', 'halo', atau sapaan lainnya)",
       });
       chatroom.openChat();
     </script>
-
-    <!-- the chat window element -->
-    <div class="chat-container"></div>
   </body>
 </html>

@@ -26,12 +26,20 @@ entities:
 slots:
   current_topic:
     type: text
+    auto_fill: false
+    influence_conversation: false
   step_number:
     type: text
+    auto_fill: false
+    influence_conversation: false
   current_query:
     type: text
+    auto_fill: false
+    influence_conversation: false
   continue:
     type: bool
+    auto_fill: false
+    influence_conversation: false
 
 responses:
 
