@@ -6,15 +6,15 @@ stories:
     steps:
     - intent: greet
     - action: utter_greet
-    - intent: pindah_kelas
+    - intent: ask_step_pindah_kelas
     - action: action_set_topic
     - slot_was_set:
       - current_topic: pindah kelas
-    - action: utter_list_step_pindah_kelas
-    - action: pindah_kelas_form
+    - action: utter_list_step_ask_step_pindah_kelas
+    - action: ask_step_pindah_kelas_form
     - slot_was_set:
       - step_number: 1
-    - active_loop: pindah_kelas_form
+    - active_loop: ask_step_pindah_kelas_form
     - intent: step_number
     - slot_was_set:
       - step_number: 1
@@ -22,7 +22,7 @@ stories:
     - intent: deny
     - slot_was_set:
       - continue: false
-    - action: pindah_kelas_form
+    - action: ask_step_pindah_kelas_form
     - active_loop: null
     - action: utter_ask_more_info
     - intent: deny
@@ -32,109 +32,109 @@ stories:
     steps:
     - intent: greet
     - action: utter_greet
-    - intent: sidang_ta_tesis
+    - intent: ask_step_sidang_ta_tesis
     - action: action_set_topic
     - slot_was_set:
       - current_topic: pelayanan sidang
-    - action: utter_list_step_sidang_ta_tesis
+    - action: utter_list_step_ask_step_sidang_ta_tesis
     - action: utter_ask_more_info
 
   - story: pelayanan PRS mahasiswa student exchange
     steps:
     - intent: greet
     - action: utter_greet
-    - intent: prs_student_exchange
+    - intent: ask_step_prs_student_exchange
     - action: action_set_topic
     - slot_was_set:
       - current_topic: PRS student exchange
-    - action: utter_list_step_prs_student_exchange
+    - action: utter_list_step_ask_step_prs_student_exchange
     - action: utter_ask_more_info
 
   - story: pelayanan alih kredit mahasiswa outbound
     steps:
     - intent: greet
     - action: utter_greet
-    - intent: credit_transfer
+    - intent: ask_step_credit_transfer
     - action: action_set_topic
     - slot_was_set:
       - current_topic: alih kredit mahasiswa outbound
-    - action: utter_list_step_credit_transfer
+    - action: utter_list_step_ask_step_credit_transfer
     - action: utter_ask_more_info
 
   - story: pelayanan surat keterangan
     steps:
     - intent: greet
     - action: utter_greet
-    - intent: surat_keterangan
+    - intent: ask_step_surat_keterangan
     - action: action_set_topic
     - slot_was_set:
       - current_topic: surat keterangan
-    - action: utter_list_step_penyediaan_surat_keterangan
+    - action: utter_list_step_penyediaan_ask_step_surat_keterangan
     - action: utter_ask_more_info
 
   - story: pelayanan legalisir transkrip, ijazah, dan terjemahan ijazah
     steps:
     - intent: greet
     - action: utter_greet
-    - intent: legalisir_transkrip_ijazah_terjemahan
+    - intent: ask_step_legalisir_transkrip_ijazah_terjemahan
     - action: action_set_topic
     - slot_was_set:
       - current_topic: legalisir transkrip, ijazah, dan terjemahan  ijazah
-    - action: utter_list_step_legalisir_transkrip_ijazah_terjemahan
+    - action: utter_list_step_ask_step_legalisir_transkrip_ijazah_terjemahan
     - action: utter_ask_more_info
 
   - story: layanan administrasi mahasiswa program jalur cepat sarjana-magister
     steps:
     - intent: greet
     - action: utter_greet
-    - intent: administrasi_fast_track
+    - intent: ask_step_administrasi_fast_track
     - action: action_set_topic
     - slot_was_set:
       - current_topic: fast track
-    - action: utter_list_step_administrasi_fast_track
+    - action: utter_list_step_ask_step_administrasi_fast_track
     - action: utter_ask_more_info
 
   - story: pelayanan pembuatan transkrip hilang bagi alumni
     steps:
     - intent: greet
     - action: utter_greet
-    - intent: pembuatan_transkrip_hilang_alumni
+    - intent: ask_step_pembuatan_transkrip_hilang_alumni
     - action: action_set_topic
     - slot_was_set:
       - current_topic: transkrip hilang bagi alumni
-    - action: utter_list_step_pembuatan_transkrip_hilang_alumni
+    - action: utter_list_step_ask_step_pembuatan_transkrip_hilang_alumni
     - action: utter_ask_more_info
 
   - story: pelayanan pengajuan beasiswa itb dan beasiswa voucher
     steps:
     - intent: greet
     - action: utter_greet
-    - intent: pengajuan_beasiswa
+    - intent: ask_step_pengajuan_beasiswa
     - action: action_set_topic
     - slot_was_set:
       - current_topic: pengajuan beasiswa ITB dan/atau voucher
-    - action: utter_list_step_pengajuan_beasiswa
+    - action: utter_list_step_ask_step_pengajuan_beasiswa
     - action: utter_ask_more_info
 
   - story: pelayanan dosen tamu
     steps:
     - intent: greet
     - action: utter_greet
-    - intent: dosen_tamu
+    - intent: ask_step_dosen_tamu
     - action: action_set_topic
     - slot_was_set:
       - current_topic: dosen tamu
-    - action: utter_list_step_dosen_tamu
+    - action: utter_list_step_ask_step_dosen_tamu
     - action: utter_ask_more_info
 
   - story: pelayanan kerja praktek untuk mahasiswa stei
     steps:
     - intent: greet
     - action: utter_greet
-    - intent: kp
+    - intent: ask_step_kp
     - action: action_set_topic
     - slot_was_set:
-      - current_topic: kp
+      - current_topic: ask_step_kp
     - action: utter_list_step_Pelayanan_Surat_Permohonan_Kerja_Praktek_(Sebelum Pelaksanaan Kerja Praktek)
     - action: utter_list_step_Pelayanan_Surat_Pelaksanaan_Kerja_Praktek_dan_Formulir_Penilaian_(Pada saat akan melaksanakan Kerja Praktek)
     - action: utter_list_step_Pada_akhir_Pelaksanaan_Kerja_Praktek_di_Perusahaan_atau_Instansi

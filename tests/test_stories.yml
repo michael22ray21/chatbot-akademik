@@ -23,11 +23,35 @@
   - action: utter_greet
   - user: |
       Bagaimana caranya untuk pindah kelas
-    intent: pindah_kelas
+    intent: ask_step_pindah_kelas
   - action: action_set_topic
   - slot_was_set:
     - current_topic: pindah kelas
-  - action: utter_list_step_pindah_kelas
+  - action: utter_list_step_ask_step_pindah_kelas
+  - action: utter_ask_step_numbber
+  - user: |
+      langkah 1
+    intent: step_number
+  - action: utter_step_detail
+  - action: utter_ask_continue
+  - user: |
+      tidak
+    intent: deny
+  - action: utter_goodbye
+
+- story: pelayanan pindah kelas 2
+  steps:
+  - user: |
+      hai
+    intent: greet
+  - action: utter_greet
+  - user: |
+      Kalau kelas bentrok bagaimana ya?
+    intent: ask_step_pindah_kelas
+  - action: action_set_topic
+  - slot_was_set:
+    - current_topic: pindah kelas
+  - action: utter_list_step_ask_step_pindah_kelas
   - action: utter_ask_step_numbber
   - user: |
       langkah 1
@@ -47,11 +71,11 @@
   - action: utter_greet
   - user: |
       bagaimana saya ingin sidang TA
-  - intent: sidang_ta_tesis
+  - intent: ask_step_sidang_ta_tesis
   - action: action_set_topic
   - slot_was_set:
     - current_topic: pelayanan sidang
-  - action: utter_list_step_sidang_ta_tesis
+  - action: utter_list_step_ask_step_sidang_ta_tesis
   - action: utter_ask_more_info
 
 - story: pelayanan PRS mahasiswa student exchange
@@ -62,11 +86,11 @@
   - action: utter_greet
   - user: |
       saya mahasiswa student exchange dan perlu melakukan PRS
-    intent: prs_student_exchange
+    intent: ask_step_prs_student_exchange
   - action: action_set_topic
   - slot_was_set:
     - current_topic: PRS student exchange
-  - action: utter_list_step_prs_student_exchange
+  - action: utter_list_step_ask_step_prs_student_exchange
   - action: utter_ask_more_info
 
 - story: pelayanan alih kredit mahasiswa outbound
@@ -77,11 +101,11 @@
   - action: utter_greet
   - user: |
       saya ingin mentransfer SKS saya
-    intent: credit_transfer
+    intent: ask_step_credit_transfer
   - action: action_set_topic
   - slot_was_set:
     - current_topic: alih kredit mahasiswa outbound
-  - action: utter_list_step_credit_transfer
+  - action: utter_list_step_ask_step_credit_transfer
   - action: utter_ask_more_info
 
 - story: pelayanan surat keterangan
@@ -92,11 +116,11 @@
   - action: utter_greet
   - user: |
       saya perlu membuat surat keterangan
-    intent: surat_keterangan
+    intent: ask_step_surat_keterangan
   - action: action_set_topic
   - slot_was_set:
     - current_topic: surat keterangan
-  - action: utter_list_step_penyediaan_surat_keterangan
+  - action: utter_list_step_penyediaan_ask_step_surat_keterangan
   - action: utter_ask_more_info
 
 - story: pelayanan legalisir transkrip, ijazah, dan terjemahan ijazah
@@ -107,11 +131,11 @@
   - action: utter_greet
   - user: |
       saya butuh terjemahan ijazah saya dilegalisir
-    intent: legalisir_transkrip_ijazah_terjemahan
+    intent: ask_step_legalisir_transkrip_ijazah_terjemahan
   - action: action_set_topic
   - slot_was_set:
     - current_topic: legalisir transkrip, ijazah, dan terjemahan  ijazah
-  - action: utter_list_step_legalisir_transkrip_ijazah_terjemahan
+  - action: utter_list_step_ask_step_legalisir_transkrip_ijazah_terjemahan
   - action: utter_ask_more_info
 
 - story: layanan administrasi mahasiswa program jalur cepat sarjana-magister
@@ -122,11 +146,11 @@
   - action: utter_greet
   - user: |
       saya ingin mengikuti program fast track
-    intent: administrasi_fast_track
+    intent: ask_step_administrasi_fast_track
   - action: action_set_topic
   - slot_was_set:
     - current_topic: fast track
-  - action: utter_list_step_administrasi_fast_track
+  - action: utter_list_step_ask_step_administrasi_fast_track
   - action: utter_ask_more_info
 
 - story: pelayanan pembuatan transkrip hilang bagi alumni
@@ -137,11 +161,11 @@
   - action: utter_greet
   - user: |
       transkrip saya hilang
-    intent: pembuatan_transkrip_hilang_alumni
+    intent: ask_step_pembuatan_transkrip_hilang_alumni
   - action: action_set_topic
   - slot_was_set:
     - current_topic: transkrip hilang bagi alumni
-  - action: utter_list_step_pembuatan_transkrip_hilang_alumni
+  - action: utter_list_step_ask_step_pembuatan_transkrip_hilang_alumni
   - action: utter_ask_more_info
 
 - story: pelayanan pengajuan beasiswa itb dan beasiswa voucher
@@ -152,11 +176,11 @@
   - action: utter_greet
   - user: |
       saya ingin mengajukan beasiswa saya
-    intent: pengajuan_beasiswa
+    intent: ask_step_pengajuan_beasiswa
   - action: action_set_topic
   - slot_was_set:
     - current_topic: pengajuan beasiswa ITB dan/atau voucher
-  - action: utter_list_step_pengajuan_beasiswa
+  - action: utter_list_step_ask_step_pengajuan_beasiswa
   - action: utter_ask_more_info
 
 - story: pelayanan dosen tamu
@@ -167,11 +191,11 @@
   - action: utter_greet
   - user: |
       saya ingin mengadakan sebuah kuliah tamu
-    intent: dosen_tamu
+    intent: ask_step_dosen_tamu
   - action: action_set_topic
   - slot_was_set:
     - current_topic: dosen tamu
-  - action: utter_list_step_dosen_tamu
+  - action: utter_list_step_ask_step_dosen_tamu
   - action: utter_ask_more_info
 
 - story: pelayanan kerja praktek untuk mahasiswa stei
@@ -182,10 +206,10 @@
   - action: utter_greet
   - user: |
       saya perlu melaksanakan kerja praktek
-    intent: kp
+    intent: ask_step_kp
   - action: action_set_topic
   - slot_was_set:
-    - current_topic: kp
+    - current_topic: ask_step_kp
   - action: utter_list_step_Pelayanan_Surat_Permohonan_Kerja_Praktek_(Sebelum Pelaksanaan Kerja Praktek)
   - action: utter_list_step_Pelayanan_Surat_Pelaksanaan_Kerja_Praktek_dan_Formulir_Penilaian_(Pada saat akan melaksanakan Kerja Praktek)
   - action: utter_list_step_Pada_akhir_Pelaksanaan_Kerja_Praktek_di_Perusahaan_atau_Instansi

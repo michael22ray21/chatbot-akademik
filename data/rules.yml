@@ -30,10 +30,10 @@ rules:
 
   - rule: submit form
     condition:
-    - active_loop: pindah_kelas_form
+    - active_loop: ask_step_pindah_kelas_form
     steps:
     # deactivate the form
-    - action: pindah_kelas_form
+    - action: ask_step_pindah_kelas_form
     - active_loop: null
     - slot_was_set:
       - requested_slot: null

@@ -34,7 +34,7 @@ class ActionSetTopic(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        text = (tracker.latest_message['intent']).replace("_", " ")
+        text = tracker.latest_message['intent'].replace("_", " ")
         dispatcher.utter_message(text="Oke!")
 
         return [SlotSet("current_topic", text)]
@@ -64,7 +64,7 @@ class ValidatePindahKelasForm(FormValidationAction):
     """Example of a form validation action."""
 
     def name(self) -> Text:
-        return "validate_pindah_kelas_form"
+        return "validate_ask_step_pindah_kelas_form"
 
     def validate_step_number(
         self,

@@ -7,17 +7,28 @@ intents:
   - goodbye
   - affirm
   - deny
-  - pindah_kelas
-  - sidang_ta_tesis
-  - prs_student_exchange
-  - credit_transfer
-  - surat_keterangan
-  - legalisir_transkrip_ijazah_terjemahan
-  - administrasi_fast_track
-  - pembuatan_transkrip_hilang_alumni
-  - pengajuan_beasiswa
-  - dosen_tamu
-  - kp
+  - ask_step_pindah_kelas
+  - ask_step_sidang_ta_tesis
+  - ask_step_prs_student_exchange
+  - ask_step_credit_transfer
+  - ask_step_surat_keterangan
+  - ask_step_legalisir_transkrip_ijazah_terjemahan
+  - ask_step_administrasi_fast_track
+  - ask_step_pembuatan_transkrip_hilang_alumni
+  - ask_step_pengajuan_beasiswa
+  - ask_step_dosen_tamu
+  - ask_step_kp
+  - ask_needs_pindah_kelas
+  - ask_needs_sidang_ta_tesis
+  - ask_needs_prs_student_exchange
+  - ask_needs_credit_transfer
+  - ask_needs_surat_keterangan
+  - ask_needs_legalisir_transkrip_ijazah_terjemahan
+  - ask_needs_administrasi_fast_track
+  - ask_needs_pembuatan_transkrip_hilang_alumni
+  - ask_needs_pengajuan_beasiswa
+  - ask_needs_dosen_tamu
+  - ask_needs_kp
   - step_number
 
 entities:
@@ -81,12 +92,13 @@ responses:
   - text: "Pelayanan apa lagi yang kamu ingin tahu lebih lanjut?"
   
   utter_ask_step_number:
-  - text: "Apakah ada langkah yang kamu ingin tahu lebih lanjut?"
+  - text: "Apakah ada langkah yang kamu ingin tahu lebih lanjut?\n
+           (Bisa dijawab dengan nomor langkahnya)"
 
   utter_ask_continue:
   - text: "Apakah masih ada langkah yang perlu informasi lebih lanjut?"
 
-  utter_list_step_pindah_kelas:
+  utter_list_step_ask_step_pindah_kelas:
   - text: "Berikut langkah-langkah pengajuan pindah kelas paralel:\n\n
            1. Ajukan permohonan kepada kedua dosen pengampu.\n
            2. Lalu meminta persetujuan kepada kedua dosen pengampu dengan membawa fotokopi KSM (kartu studi mahasiswa) yang sudah diubah.\n
@@ -95,7 +107,7 @@ responses:
            4. Serahkan KSM yang sudah ditandatangani kepada staf administrasi.\n
            5. Tandatangani lembar pendaftaran pindah kelas yang ada di Program Studi."
 
-  utter_list_step_sidang_ta_tesis:
+  utter_list_step_ask_step_sidang_ta_tesis:
   - text: "Berikut langkah yang harus dilakukan mahasiswa:\n\n
            1. Kita harus mengisi form pendaftaran sidang TA/tesis kepada staf administrasi prodi.\n
            2. Kemudian minta persetujuan dan tanda tangan dari dosen pembimbing dan dosen penguji.\n
@@ -104,7 +116,7 @@ responses:
            4. Setelah dokumen yang diserahkan diproses, jadwal sidang akan diinformasikan dan draf TA/tesis akan diberikan kepada dosen pembimbing dan penguji bersamaan dengan surat tugas dan berkas penilaian.\n
            5. Sidang kemudian dapat dilaksanakan."
 
-  utter_list_step_prs_student_exchange:
+  utter_list_step_ask_step_prs_student_exchange:
   - text: "Berikut langkah yang harus dilakukan mahasiswa:\n\n
            1. Mahasiswa mendaftar secara online di web usm.itb.acid\n
            2. Pendaftaran akan dievaluasi, jika mahasiswa lolos mahasiswa akan menerima LoA.\n
@@ -114,14 +126,14 @@ responses:
            5.b. Jika tidak ada perubahan perihal pengambilan mata kuliah, maka mengikuti perkuliahan sesuai jadwal.\n
            6. Mahasiswa juga masih harus memastikan kembali bahwa mata kuliah yang diambil sudah sesuai dengan rencana studi yang final pada minggu ketiga perkuliahan."
 
-  utter_list_step_credit_transfer:
+  utter_list_step_ask_step_credit_transfer:
   - text: "Berikut langkah yang harus dilakukan mahasiswa:\n\n
            1. Mahasiswa Mengajukan surat permohonan pengajuan proses alih kredit (credit transfer) mahasiswa outbound double degree/student exchange kepada Ketua Program Studi dengan mengisi Formulir Surat Permohonan Alih Kredit (Credit Transfer) – FRM/STEI/AKD/SOP-08/01-00.\n
            2. Mahasiswa kemudian berdiskusi dan meminta persetujuan dosen wali akademik.\n
            3. Setelah berdiskusi mahasiswa menyerahkan surat permohonan pengajuan proses alih kredit (credit transfer) mahasiswa outbound double degree/student exchange beserta kelengkapan berkas yang sudah disetujui oleh dosen wali akademik ke Staf Administrasi Prodi.
            4. Lembar permohonan tersebut kemudian akan diproses oleh ketua program studi, mahasiswa diwajibkan melakukan perbaikan dan usulan ulang terhadap permohonan alih kredit (credit transfer), apabila usulan tidak disetujui oleh Ketua Program Studi."
 
-  utter_list_step_penyediaan_surat_keterangan:
+  utter_list_step_penyediaan_ask_step_surat_keterangan:
   - text: "Berikut langkah yang harus dilakukan mahasiswa:\n\n
            1. Mahasiswa Mengisi Formulir Permohonan Dibuatkan Surat Keterangan/Pengantar (FRM/STEI/AKD/SOP-09/01.01) di staf layanan.\n
            2. Mahasiswa kemudian menyerahkan formulir yang telah diisi kepada Staf Layanan, dan pastikan data sudah benar serta dicek oleh Staf Layanan.\n
@@ -129,7 +141,7 @@ responses:
            3.b. Apabila data yang diberikan sudah benar, maka data akan ditindaklanjuti oleh pihak bersangkutan.\n
            4. Setelah data diproses mahasiswa dapat mengambil surat keterangan yang sudah ditandatangani oleh Ketua Program Studi di Staf Layanan."
 
-  utter_list_step_legalisir_transkrip_ijazah_terjemahan:
+  utter_list_step_ask_step_legalisir_transkrip_ijazah_terjemahan:
   - text: "Berikut langkah yang harus dilakukan mahasiswa:\n\n
            1. Mahasiswa menyerahkan dokumen persyaratan pengajuan legalisir (Menyerahkan fotokopi ijazah/transkrip (ind/ing) dan menunjukkan ijazah/transkrip asli kepada petugas legalisir serta membawa pas photo ukuran 4×6 (1 lembar) hitam putih untuk pembuatan terjemahan ijazah).\n
            2.a. Jika ternyata semua dokumen yang diberikan belum sesuai, maka mahasiswa akan menerima berkas legalisir yang dikembalikan oleh staf layanan legalisir\n
@@ -137,7 +149,7 @@ responses:
            3. Setelah berdiskusi mahasiswa menyerahkan surat permohonan pengajuan proses alih kredit (credit transfer) mahasiswa outbound double degree/student exchange beserta kelengkapan berkas yang sudah disetujui oleh dosen wali akademik ke Staf Administrasi Prodi.
            4. Mahasiswa kemudian dapat Mengambil hasil legalisir/terjemahan ijazah ke petugas legalisir dengan membawa bukti legalisir."
 
-  utter_list_step_administrasi_fast_track:
+  utter_list_step_ask_step_administrasi_fast_track:
   - text: "Berikut langkah yang harus dilakukan mahasiswa:\n\n
            1. Pertama mahasiswa mengisi formulir permintaan (Mengisi Formulir Minat Program Jalur Cepat (Fast Track) Sarjana – Magister ITB (FRM/STEI/AKD/SOP-11/01-00) dan Formulir Daftar Mata Kuliah Jalur Cepat Sarjana – Magister (FRM/STEI/AKD/SOP-11/02-01)).\n
            2. Setelah mengisi formulir permintaan mahasiswa kemudian berdiskusi dan meminta persetujuan wali.\n
@@ -147,13 +159,13 @@ responses:
            5.b. Jika data yang diberikan ternyata memenuhi syarat, data akan diproses kembali.\n
            6. Setelah selesai Kasubdit Akademik akan melakukan proses pengaturan situs akademik terhadap status baru peserta FT."
 
-  utter_list_step_pembuatan_transkrip_hilang_alumni:
+  utter_list_step_ask_step_pembuatan_transkrip_hilang_alumni:
   - text: "Berikut langkah yang harus dilakukan mahasiswa:\n\n
            1. Pertama mahasiswa Membuat surat permohonan yang ditujukan kepada Ketua Program Studi tentang permohonan cetak ulang transkrip karena hilang/rusak dengan melampirkan dokumen sebagai berikut (Surat bukti kehilangan dari pihak yang berwajib, Pas photo dengan ukuran 2×3 hitam putih sebanyak 2 (dua) lembar, Transkrip yang rusak (apabila permohonan karena transkrip rusak).)\n
            2. Mahasiswa kemudian menyerahkan surat permohonan beserta lampirannya kepada staf layanan.\n
            3. Surat permohonan serta berkas-berkas yang telah diberikan kemudian akan diproses, setelah selesai diproses mahasiswa dapat mengambil transkrip yang sudah ditandatangan oleh Dekan dan Ketua Program Studi dengan menandatangani bukti pengambilan."
 
-  utter_list_step_pengajuan_beasiswa:
+  utter_list_step_ask_step_pengajuan_beasiswa:
   - text: "Berikut langkah yang harus dilakukan mahasiswa:\n\n
            1. Mahasiswa menerima pengumuman tentang Beasiswa ITB atau Beasiswa Voucher ITB baik yang disampaikan melalui e-mail, mading, atau terpublish pada website Lembaga Kemahasiswaan (https://kemahasiswaan.itb.ac.id/beasiswa) dan Sekolah Pascasarjana (http://www.sps.itb.ac.id).\n
            2. Siswa yang tertarik dapat mendaftar dan menyerahkan persyaratan beasiswa terkait kepada staf administrasi prodi.\n
@@ -162,7 +174,7 @@ responses:
            4.b. Jika ternyata semua sudah terpenuhi dan sesuai dengan syarat yang telah ditetapkan, maka dapat lanjut ke langkah selanjutnya.\n
            5. Mahasiwa dapat Mengambil kembali surat pernyataan kesediaan sebagai asisten pengajar dan peneliti serta surat pernyataan (khusus kelengkapan beasiswa Voucher ITB) yang sudah disetujui oleh Ketua Program Studi dan Dekan maksimal 3 (tiga) hari kerja sejak pengajuan lengkap dari mahasiswa."
 
-  utter_list_step_dosen_tamu:
+  utter_list_step_ask_step_dosen_tamu:
   - text: "Berikut langkah yang harus dilakukan mahasiswa:\n\n
            1. Pertama mahasiswa Membuat surat permohonan yang ditujukan kepada Ketua Program Studi tentang permohonan cetak ulang transkrip karena hilang/rusak dengan melampirkan dokumen sebagai berikut (Surat bukti kehilangan dari pihak yang berwajib, Pas photo dengan ukuran 2×3 hitam putih sebanyak 2 (dua) lembar, Transkrip yang rusak (apabila permohonan karena transkrip rusak).)\n
            2. Mahasiswa kemudian menyerahkan surat permohonan beserta lampirannya kepada staf layanan.\n
@@ -210,10 +222,10 @@ responses:
 actions:
   - action_set_topic
   - action_say_topic
-  - validate_pindah_kelas_form
+  - validate_ask_step_pindah_kelas_form
 
 forms:
-  pindah_kelas_form:
+  ask_step_pindah_kelas_form:
     ignored_intents: 
     - chitchat
     required_slots:

@@ -89,69 +89,152 @@ nlu:
 # - no way
 # - not really
 
-  - intent: pindah_kelas
+# ask needs intents 
+  - intent: ask_needs_pindah_kelas
     examples: |
+      - apa saja yang diperlukan untuk pindah kelas?
+      - saya perlu apa saja untuk bisa pindah kelas?
+      - apa saja yang perlu disiapkan untuk bisa pindah kelas?
+      - perlu apa saja untuk bisa pindah kelas?
+
+  - intent: ask_needs_sidang_ta_tesis
+    examples: |
+      - apa saja yang diperlukan untuk sidang?
+      - apa saja yang perlu disiapkan untuk sidang?
+      - apa saja keperluan sidang?
+      - perlu apa saja untuk bisa sidang?
+
+  - intent: ask_needs_prs_student_exchange
+    examples: |
+      - sebagai student exchange, apa saja yang diperlukan untuk prs?
+      - apa yang perlu saya siapkan untuk bisa prs sebagai student exchange?
+      - perlu apa saja untuk melakukan prs sebagai student exchange?
+
+  - intent: ask_needs_credit_transfer
+    examples: |
+      - apa saja yang diperlukan untuk melakukan credit transfer?
+      - apa yang perlu saya siapkan untuk melakukan transfer kredit?
+      - apa saja yang saya perlu siapkan untuk mentransfer SKS saya?
+      - perlu apa saja untuk bisa mentransfer SKS saya?
+
+  - intent: ask_needs_surat_keterangan
+    examples: |
+      - apa saja yang diperlukan untuk membuat surat keterangan?
+      - apa saja yang perlu disiapkan untuk membuat surat keterangan?
+      - perlu apa saja untuk bisa membuat surat keterangan?
+
+  - intent: ask_needs_legalisir_transkrip_ijazah_terjemahan
+    examples: |
+      - apa saja yang perlu disiapkan untuk melegalisir transkrip ijazah terjemahan saya?
+      - saya perlu menyiapkan apa saja untuk bisa melegalisir transkrip ijazah terjemahan saya?
+      - apa saja yang diperlukan untuk bisa melegalisir transkrip ijazah terjemahan saya?
+
+  - intent: ask_needs_administrasi_fast_track
+    examples: |
+      - apa saja yang diperlukan untuk proses administrasi fast track?
+      - apa saja yang perlu disiapkan untuk proses administrasi jalur cepat?
+      - perlu apa saja untuk proses administrasi fast track?
+
+  - intent: ask_needs_pembuatan_transkrip_hilang_alumni
+    examples: |
+      - apa saja yang diperlukan untuk membuat kembali transkrip yang hilang sebagai alumni?
+      - apa saja yang perlu disiapkan untuk proses pembuatan kembali transkrip saya yang hilang sebagai alumni?
+      - perlu apa saja untuk bisa mengajukan pembuatan transkrip saya yang hilang sebagai alumni?
+
+  - intent: ask_needs_pengajuan_beasiswa
+    examples: |
+      - apa saja yang diperlukan untuk proses pengajuan beasiswa?
+      - apa saja yang perlu disiapkan untuk mengajukan beasiswa?
+      - perlu apa saja untuk proses pengajuan beasiswa?
+
+  - intent: ask_needs_dosen_tamu
+    examples: |
+      - apa saja yang diperlukan untuk proses pengadaan kuliah tamu?
+      - apa saja yang perlu disiapkan untuk mengundang dosen tamu?
+      - perlu apa saja untuk proses pengadaan dosen tamu?
+
+  - intent: ask_needs_kp
+    examples: |
+      - apa saja yang diperlukan untuk proses pelaksanaan KP?
+      - apa saja yang perlu disiapkan untuk pelaksanaan kerja praktek?
+      - perlu apa saja untuk proses pelaksanaan kp?
+
+# ask steps intents
+  - intent: ask_step_pindah_kelas
+    examples: |
+      - pindah kelas
       - saya mau pindah kelas
       - pindah kelas bagaimana ya?
       - kelas saya bentrok
+      - kelas aku ada yang bertabrakan
       - aku ingin kelas baru
+      - apa yang harus saya lakukan untuk bisa pindah kelas
 
-  - intent: sidang_ta_tesis
+  - intent: ask_step_sidang_ta_tesis
     examples: |
+      - apa yang harus saya lakukan untuk bisa sidang
       - sidang
       - saya mau sidang
       - proses sidang bagaimana ya?
       - TA saya sudah selesai
       - TA selesai bagaimana ya?
 
-  - intent: prs_student_exchange
+  - intent: ask_step_prs_student_exchange
     examples: |
+      - apa yang harus saya lakukan untuk bisa prs sebagai mahasiswa student exchange
       - saya mahasiswa student exchange yang ingin PRS
       - saya student exchange dan rencana studi saya sudah selesai
       - saya student exchange dan rencana studi saya ingin diganti
 
-  - intent: credit_transfer
+  - intent: ask_step_credit_transfer
     examples: |
+      - apa yang harus saya lakukan untuk bisa 
       - bagaimana transfer SKS saya?
       - cara mentransfer SKS bagaimana ya?
 
-  - intent: surat_keterangan
+  - intent: ask_step_surat_keterangan
     examples: |
+      - apa yang harus saya lakukan untuk bisa 
       - bagaimana pembuatan surat keterangan?
       - proses pembuatan surat keterangan bagaimana?
 
-  - intent: legalisir_transkrip_ijazah_terjemahan
+  - intent: ask_step_legalisir_transkrip_ijazah_terjemahan
     examples: |
+      - apa yang harus saya lakukan untuk bisa 
       - ijazah saya ingin dilegalisir
       - transkrip saya ingin dilegalisir
       - terjemahan ijazah saya ingin dilegalisir
 
-  - intent: administrasi_fast_track
+  - intent: ask_step_administrasi_fast_track
     examples: |
+      - apa yang harus saya lakukan untuk bisa 
       - fast track bagaimana?
-      - butuh apa saja untuk fast track
       - program jalur cepat
       - sarjana-magister
 
-  - intent: pembuatan_transkrip_hilang_alumni
+  - intent: ask_step_pembuatan_transkrip_hilang_alumni
     examples: |
+      - apa yang harus saya lakukan untuk bisa 
       - transkrip saya hilang
       - bagaimana kalau transkrip saya hilang
       - saya kehilangan transkrip saya
 
-  - intent: pengajuan_beasiswa
+  - intent: ask_step_pengajuan_beasiswa
     examples: |
+      - apa yang harus saya lakukan untuk bisa 
       - mengajukan beasiswa bagaimana?
       - bagaimana cara mengajukan beasiswa?
 
-  - intent: dosen_tamu
+  - intent: ask_step_dosen_tamu
     examples: |
+      - apa yang harus saya lakukan untuk bisa 
       - bagaimana mengadakan kuliah tamu?
       - saya ingin mengadakan kuliah tamu
       - ada dosen tamu yang ingin saya ajukan untuk mengadakan kuliah tamu
 
-  - intent: kp
+  - intent: ask_step_kp
     examples: |
+      - apa yang harus saya lakukan untuk bisa 
       - saya ingin kp
       - saya ingin kerja praktek
       - bagaimana cara untuk kerja praktek?
