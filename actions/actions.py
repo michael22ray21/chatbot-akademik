@@ -13,18 +13,6 @@ from rasa_sdk.events import SlotSet
 from rasa_sdk.forms import FormValidationAction
 
 
-class ActionHelloWorld(Action):
-
-    def name(self) -> Text:
-        return "action_hello_world"
-
-    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-        dispatcher.utter_message(text="Hello World!")
-
-        return []
-
-
 class ActionSetTopic(Action):
 
     def name(self) -> Text:
@@ -34,8 +22,15 @@ class ActionSetTopic(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        text = tracker.latest_message['intent'].replace("_", " ")
-        dispatcher.utter_message(text="Oke!")
+        if (tracker.latest_message['intent']['name'].startswith('ask_needs')) :
+            text = tracker.latest_message['intent']['name'].replace("ask_needs_", "")
+            text = text.replace("_", " ")
+
+        elif (tracker.latest_message['intent']['name'].startswith('ask_step')) :
+            text = tracker.latest_message['intent']['name'].replace("ask_step_", "")
+            text = text.replace("_", " ")
+
+        dispatcher.utter_message(text = "Oke!")
 
         return [SlotSet("current_topic", text)]
 
@@ -60,7 +55,7 @@ class ActionSayTopic(Action):
         return []
 
 
-class ValidatePindahKelasForm(FormValidationAction):
+class ValidateAskStepPindahKelasForm(FormValidationAction):
     """Example of a form validation action."""
 
     def name(self) -> Text:
@@ -74,9 +69,10 @@ class ValidatePindahKelasForm(FormValidationAction):
         domain: Dict[Text, Any],
     ) -> Dict[Text, Any]:
         # validate the step number given by the user
-        # regex representation : [\d]\.([\d\w]\.)?
-        if re.search(r"[\d]\.([\d\w]\.)?", value.lower()):
+        # regex representation : [\d](\.[\d\w])?\.?
+        if re.search(r"[\d](\.[\d\w])?\.?", value.lower()):
             [SlotSet("current_query", value.lower())]
+            dispatcher.utter_message(response = "utter_step_detail")
             return {"step_number": value.lower()}
         else:
             return {"step_number": None}

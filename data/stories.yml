@@ -2,36 +2,18 @@ version: "2.0"
 
 stories:
 
-  - story: pelayanan pindah kelas
+  - story: pelayanan pindah kelas with steps
     steps:
-    - intent: greet
-    - action: utter_greet
     - intent: ask_step_pindah_kelas
     - action: action_set_topic
     - slot_was_set:
       - current_topic: pindah kelas
     - action: utter_list_step_ask_step_pindah_kelas
     - action: ask_step_pindah_kelas_form
-    - slot_was_set:
-      - step_number: 1
     - active_loop: ask_step_pindah_kelas_form
-    - intent: step_number
-    - slot_was_set:
-      - step_number: 1
-    - action: utter_step_detail
-    - intent: deny
-    - slot_was_set:
-      - continue: false
-    - action: ask_step_pindah_kelas_form
-    - active_loop: null
-    - action: utter_ask_more_info
-    - intent: deny
-    - action: utter_goodbye
 
   - story: pelayanan sidang TA/tesis
     steps:
-    - intent: greet
-    - action: utter_greet
     - intent: ask_step_sidang_ta_tesis
     - action: action_set_topic
     - slot_was_set:
@@ -41,8 +23,6 @@ stories:
 
   - story: pelayanan PRS mahasiswa student exchange
     steps:
-    - intent: greet
-    - action: utter_greet
     - intent: ask_step_prs_student_exchange
     - action: action_set_topic
     - slot_was_set:
@@ -52,8 +32,6 @@ stories:
 
   - story: pelayanan alih kredit mahasiswa outbound
     steps:
-    - intent: greet
-    - action: utter_greet
     - intent: ask_step_credit_transfer
     - action: action_set_topic
     - slot_was_set:
@@ -63,8 +41,6 @@ stories:
 
   - story: pelayanan surat keterangan
     steps:
-    - intent: greet
-    - action: utter_greet
     - intent: ask_step_surat_keterangan
     - action: action_set_topic
     - slot_was_set:
@@ -74,8 +50,6 @@ stories:
 
   - story: pelayanan legalisir transkrip, ijazah, dan terjemahan ijazah
     steps:
-    - intent: greet
-    - action: utter_greet
     - intent: ask_step_legalisir_transkrip_ijazah_terjemahan
     - action: action_set_topic
     - slot_was_set:
@@ -85,8 +59,6 @@ stories:
 
   - story: layanan administrasi mahasiswa program jalur cepat sarjana-magister
     steps:
-    - intent: greet
-    - action: utter_greet
     - intent: ask_step_administrasi_fast_track
     - action: action_set_topic
     - slot_was_set:
@@ -96,8 +68,6 @@ stories:
 
   - story: pelayanan pembuatan transkrip hilang bagi alumni
     steps:
-    - intent: greet
-    - action: utter_greet
     - intent: ask_step_pembuatan_transkrip_hilang_alumni
     - action: action_set_topic
     - slot_was_set:
@@ -107,8 +77,6 @@ stories:
 
   - story: pelayanan pengajuan beasiswa itb dan beasiswa voucher
     steps:
-    - intent: greet
-    - action: utter_greet
     - intent: ask_step_pengajuan_beasiswa
     - action: action_set_topic
     - slot_was_set:
@@ -118,8 +86,6 @@ stories:
 
   - story: pelayanan dosen tamu
     steps:
-    - intent: greet
-    - action: utter_greet
     - intent: ask_step_dosen_tamu
     - action: action_set_topic
     - slot_was_set:
@@ -129,8 +95,6 @@ stories:
 
   - story: pelayanan kerja praktek untuk mahasiswa stei
     steps:
-    - intent: greet
-    - action: utter_greet
     - intent: ask_step_kp
     - action: action_set_topic
     - slot_was_set:

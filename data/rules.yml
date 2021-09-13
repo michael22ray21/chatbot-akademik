@@ -3,7 +3,6 @@ version: "2.0"
 rules:
 
   - rule: welcome user
-    conversation_start: true  # this rule only applies at the beginning of a conversation
     steps:
       - intent: greet
       - action: utter_greet
@@ -37,5 +36,5 @@ rules:
     - active_loop: null
     - slot_was_set:
       - requested_slot: null
-    # after the form is done
+    # stuff to do after form is done
     - action: utter_ask_more_info
